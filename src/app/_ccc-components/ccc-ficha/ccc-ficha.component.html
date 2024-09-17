@@ -1,0 +1,20 @@
+<div class="ficha-container">
+  <h2>{{ title }}</h2>
+  <div class="cabecera-grid-acciones">
+    <div class="column-left">
+      <div class="botones-accion">
+        <button class="add boton-accion" (click)="abrirCliente($event)"></button>
+        <button class="eliminar boton-accion"  (click)="cerrarTab()"></button>
+        <button class="duplicar boton-accion"></button>
+      </div>
+    </div>
+    <div class="column-right">
+      <div class="botones-accion2">
+        <button class="enviar boton-accion2">Enviar</button>
+        <button class="importar boton-accion2">Importar</button>
+        <button class="exportar boton-accion2">Exportar</button>
+      </div>
+    </div>
+  </div>
+  <ng-content></ng-content>
+</div>

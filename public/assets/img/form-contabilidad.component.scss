@@ -1,0 +1,95 @@
+@import "../../../../styles/base/variables";
+@import "../../../../styles/helpers/mixins";
+@import "../../../../styles/helpers/fonts";
+
+::ng-deep {
+  #contabilidad {
+    border-radius: 4px;
+    background: #f9f9f9;
+    padding: 16px;
+    width: 100%;
+    .contabilidad {
+      .titulo {
+        color: #408cbe;
+        font-family: "Noto Sans";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.1px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        margin-top: 0px;
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+        &::after {
+          content: "\f001";
+          display: block;
+          width: 18px;
+          font: 18px / 18px DXIcons;
+        }
+      }
+
+      dx-data-grid {
+        width: 44%;
+        border-radius: 4px;
+
+        .dx-datagrid-headers {
+          border: 1px solid #dedede;
+          background: #f4f4f6;
+          box-shadow: 0px -1px 0px 0px #dee0e3 inset;
+
+          .dx-datagrid-text-content {
+            color: #1a1a1a;
+            font-family: "Noto Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.1px;
+          }
+        }
+        .dx-datagrid-header-panel {
+          .dx-toolbar {
+            margin: 0px;
+          }
+          .dx-toolbar-items-container {
+            height: 0px;
+            .dx-toolbar-after {
+              top: -35px;
+              .dx-button-content {
+                padding: 3.643px;
+                .dx-icon {
+                  &::before {
+                    content: url(/assets/img/add.svg);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .dx-bordered-bottom-view {
+          .dx-row {
+            td {
+              color: #1a1a1a;
+              font-family: "Noto Sans";
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              letter-spacing: 0.1px;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+
+      caption {
+        padding: 0.3em;
+      }
+    }
+  }
+}

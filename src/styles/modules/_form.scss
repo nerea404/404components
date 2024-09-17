@@ -1,0 +1,305 @@
+.form-title {
+  font-size: 28px;
+  font-family: $font-family-1;
+  font-weight: 400;
+  letter-spacing: 0.6pt;
+  line-height: 30px;
+  color: $color-1;
+  margin-bottom: 1rem;
+
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  @media #{$xs-sm} {
+    font-size: 18px;
+    font-family: "Roboto";
+    font-weight: 500;
+    letter-spacing: 0.4pt;
+    line-height: 30px;
+    color: $color-gris-A;
+    margin-bottom: 0rem;
+  }
+}
+
+/* You can add global styles to this file, and also import other style files */
+.form-control {
+  display: block;
+  width: 100%;
+  //height: calc(1.5em + 0.75rem + 2px);
+  height: calc(1em + 0.75rem + 2px);
+  padding: unset;
+  font-size: unset;
+  font-weight: unset;
+  line-height: unset;
+  color: unset;
+  background-color: unset;
+  background-clip: unset;
+  border: unset;
+  border-radius: unset;
+  transition: unset;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.stand-form {
+  .form-group {
+    @media #{$xs-sm} {
+      margin-bottom: 0;
+      width: 100%;
+      overflow: hidden;
+      max-width: unset !important;
+      border-bottom: 1px solid #E8E8E8;
+    }
+
+    label {
+      @media #{$xs-sm} {
+        font-size: 15px;
+        line-height: 26px;
+        margin: 0;
+        width: 50%;
+        float: left;
+      }
+    }
+
+    input, select {
+      @media #{$xs-sm} {
+        border-radius: initial;
+        box-shadow: none;
+        border: none !important;
+        padding: 0;
+        text-align: right;
+      }
+
+      &:focus {
+        @media #{$xs-sm} {
+          box-shadow: none !important;
+        }
+      }
+      label {
+        /*display: none;
+
+        @media #{$sm-max}{
+          display: block;
+        }*/
+
+        @media #{$xs-sm} {
+          margin-bottom: 0;
+          width: 50%;
+          float: left;
+        }
+      }
+    }
+
+    select {
+      @media #{$xs-sm} {
+        text-align-last: right;
+      }
+    }
+
+    .form-control {
+      @media #{$xs-sm} {
+        width: 50%;
+        float: right;
+        height: auto;
+      }
+    }
+  }
+
+  .error-msg {
+      @media #{$xs-sm} {
+        text-align: right;
+      }
+  }
+}
+
+
+.grid-form {
+
+  .grid-row {
+    position: relative;
+
+    @media #{$xs-sm} {
+      margin-bottom: 1.25rem;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0px 3px 6px rgba(151, 151, 151, .16);
+      padding: 0px 40px 0px 7px;
+    }
+
+    & > [class*="col-"] {
+      @media #{$xs-sm} {
+        border-bottom: 1px solid #E8E8E8;
+        border-right: 1px solid #E8E8E8;
+        border-collapse: collapse;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+
+      @media #{$xs-sm} {
+        margin-bottom: 0;
+        width: 100%;
+        overflow: hidden;
+        max-width: unset !important;
+        /*padding-top: 4px;
+        padding-bottom: 3px;*/
+      }
+
+      label {
+        @media #{$xs-sm} {
+          font-size: 15px;
+          line-height: 26px;
+        }
+      }
+
+      .form-control {
+        @media #{$xs-sm} {
+          width: 50%;
+          float: right;
+          height: auto;
+        }
+      }
+
+      input, select {
+        @media #{$xs-sm} {
+          border-radius: initial;
+          box-shadow: none;
+          border: none !important;
+          padding: 0;
+          text-align: right;
+
+          &:focus {
+            color: inherit;
+            background-color: inherit;
+            border-color: inherit;
+            outline: 0;
+            box-shadow: none;
+          }
+        }
+      }
+
+      select {
+        @media #{$xs-sm} {
+          text-align-last: right;
+        }
+      }
+
+      label {
+        display: none;
+
+        @media #{$sm-max}{
+          display: block;
+        }
+
+        @media #{$xs-sm} {
+          margin-bottom: 0;
+          width: 50%;
+          float: left;
+        }
+      }
+    }
+
+    .delete-btn.action-row {
+      @media #{$xs-sm} {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+
+        svg {
+          width: 16px !important;
+        }
+      }
+    }
+  }
+
+  .grid-header {
+
+    @media #{$sm-max}{
+      display: none;
+    }
+
+    label {
+      font-size: 18px;
+      font-weight: 500;
+      font-family: 'Roboto';
+      letter-spacing: 0.6pt;
+      line-height: 30px;
+      color: #5A5A5A;
+    }
+
+    .action-btn {
+      border: none;
+      background: none;
+      /* margin-left: -75px; */
+      position: relative;
+      left: -90px;
+      bottom: 10px;
+
+      @media #{$xs-sm} {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+      }
+
+      svg {
+        width: 50px;
+      }
+    }
+  }
+}
+
+/*.btn.submit[type="submit"] {
+  margin: 20px auto !important;
+  display: block;
+}*/
+
+.btn.submit[type="submit"] {
+  color: white;
+  border-radius: 10px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5pt;
+  line-height: 29px;
+  //box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: none;
+  padding: 2px 25px;
+}
+
+
+.field-label {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2143pt;
+  line-height: 20px;
+  color: $color-gris-A;
+  margin: 0;
+}
+
+.aclaracion {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  font-style: italic;
+  color: $color-gris-A;
+}

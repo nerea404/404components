@@ -1,0 +1,10 @@
+<div class="ccc-radio-button-group-container">
+  <h2>{{ titulo }}</h2>
+  <dx-radio-group
+    [items]="opciones"
+    [value]="selectedValue"
+    [disabled]="disabled"
+    (valueChanged)="handleValueChanged($event)"
+    [elementAttr]="{ 'aria-label': titulo }"
+  ></dx-radio-group>
+</div>

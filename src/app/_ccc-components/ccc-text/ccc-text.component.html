@@ -1,0 +1,13 @@
+<div class="ccc-text-container">
+    <h2>{{ titulo }}</h2>
+    <dx-text-box
+      [(value)]="valorInicial"
+      [showClearButton]="botonBorrar"
+      (onValueChanged)="handleValueChanged($event)"
+      [disabled]="disabled"
+
+    >
+    </dx-text-box>
+  
+        
+  </div>

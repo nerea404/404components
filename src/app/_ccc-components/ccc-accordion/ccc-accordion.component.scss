@@ -1,0 +1,8 @@
+@import "../../../styles/helpers/helpers-dir";
+@import '../../../styles/variables';
+
+::ng-deep {
+  .ccc-accordion-container {
+    @include ccc-accordion;
+  }
+}

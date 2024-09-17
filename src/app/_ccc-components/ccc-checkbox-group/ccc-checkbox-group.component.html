@@ -1,0 +1,14 @@
+<div class="ccc-checkbox-group-container">
+  <h2>{{ titulo }}</h2>
+  <div class="checkbox-container">
+    <div *ngFor="let checkbox of checkboxes; let i = index">
+      <dx-check-box
+        [value]="checkbox.checked"
+        [text]="checkbox.label"
+        [elementAttr]="{ 'aria-label': checkbox.label }"
+        (onValueChanged)="handleValueChanged($event, i)"
+        [disabled]="disabled"
+      ></dx-check-box>
+    </div>
+  </div>
+</div>

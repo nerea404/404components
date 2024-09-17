@@ -1,0 +1,60 @@
+<div id="data-grid-demo">
+  <div class="button-container">
+    <button (click)="createNewRow()">
+      <i class="dx-icon dx-icon-add"></i>
+    </button>
+    <button (click)="deleteFocusedRow()">
+      <i class="dx-icon dx-icon-trash"></i>
+    </button>
+    <button (click)="editFocusedRow()">
+      <i class="dx-icon dx-icon-edit"></i>
+    </button>
+
+    <button (click)="duplicateFocusedRow()">
+      <i class="dx-icon dx-icon-copy"></i>
+    </button>
+
+    <!-- <div class="dropdown">
+      <button>
+        <i class="dx-icon dx-icon-print"></i>
+      </button>
+      <div class="dropdown-content">
+        <button (click)="exportTo('excel')">Exportar a Excel</button>
+        <button (click)="exportTo('pdf')">Exportar a PDF</button>
+      </div>
+    </div> -->
+   
+  </div>
+  <dx-data-grid
+    [dataSource]="dataSource"
+    [keyExpr]="keyExpr"
+    [showBorders]="showBorders"
+    [focusedRowEnabled]="focusedRowEnabled"
+    (onFocusedRowChanged)="onFocusedRowChanged($event)"
+    [rowAlternationEnabled]="true"
+
+  >
+    <dxo-paging [enabled]="false"></dxo-paging>
+    <dxo-editing
+      mode="form"
+      [allowUpdating]="allowUpdating"
+      [allowAdding]="allowAdding"
+      [allowDeleting]="allowDeleting"
+      (onSaved)="onSaved($event)"
+    ></dxo-editing>
+
+    <dxi-column
+      *ngFor="let column of columns"
+      [dataField]="column.dataField"
+      [caption]="column.caption"
+      [width]="column.width"
+    >
+      <dxo-lookup
+        *ngIf="column.lookup"
+        [dataSource]="column.lookup.dataSource"
+        [displayExpr]="column.lookup.displayExpr"
+        [valueExpr]="column.lookup.valueExpr"
+      ></dxo-lookup>
+    </dxi-column>
+  </dx-data-grid>
+</div>

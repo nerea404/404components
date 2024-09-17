@@ -1,0 +1,13 @@
+<div class="ccc-tag-box-container">
+  <h2>{{ titulo }}</h2>
+  <dx-tag-box
+    [items]="items"
+    [(value)]="value"
+    [inputAttr]="{ 'aria-label': ariaLabel }"
+    [showClearButton]="botonBorrar"
+    [displayExpr]="'text'"
+    [valueExpr]="'id'"
+    (onValueChanged)="handleValueChanged($event)"
+    [disabled]="disabled"
+  ></dx-tag-box>
+</div>

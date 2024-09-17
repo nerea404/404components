@@ -1,0 +1,26 @@
+<h1 class="titulo-sec">Form Text</h1>
+
+<div class="content-sec">
+  <app-ccc-text
+    [titulo]="'Texto'"
+    [valorInicial]="formData.nombre"
+    [botonBorrar]="true"
+    valorInicial="input"
+    (valueChanged)="onTextValueChanged($event)"
+  ></app-ccc-text>
+
+  <app-ccc-text
+    [titulo]="'Texto sin botón borrar'"
+    [botonBorrar]="false"
+    valorInicial="input"
+    (valueChanged)="onTextValueChanged($event)"
+  ></app-ccc-text>
+
+  <app-ccc-text
+    [titulo]="'Texto disabled'"
+    [botonBorrar]="false"
+    [disabled]="true"
+    valorInicial="input"
+    (valueChanged)="onTextValueChanged($event)"
+  ></app-ccc-text>
+</div>

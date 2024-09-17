@@ -1,0 +1,24 @@
+<div class="ccc-lista-container">
+  <ccc-splitter
+    [isLeftPaneVisible]="isLeftPaneVisible"
+    [isRightPaneVisible]="isRightPaneVisible"
+    (addTab)="onAddTab()"
+  >
+    
+      <div class="left-pane-header-container" #leftPaneHeaderContainer>
+        <h1 class="left-pane-header">Filtros</h1>
+      </div>
+  
+
+    <!-- Contenido del panel central -->
+    <div central-pane>
+      <ng-content></ng-content>
+    </div>
+
+    <!-- Contenido del panel derecho -->
+    <div right-pane *ngIf="isRightPaneVisible">
+      <h1>Información</h1>
+      <app-donut-chart-cliente></app-donut-chart-cliente>
+    </div>
+  </ccc-splitter>
+</div>

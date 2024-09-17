@@ -1,0 +1,27 @@
+@import "../variables";
+
+@mixin ccc-accordion {
+  dx-accordion {
+    border-radius: 4px;
+    background: #f9f9f9;
+
+    .dx-item {
+      border: none;
+
+      .dx-item-content {
+        .dx-accordion-item-title-caption {
+          color:#408cbe;
+          font-family: $font-family-1;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          letter-spacing: 0.1px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  @content;
+}

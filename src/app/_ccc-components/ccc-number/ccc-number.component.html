@@ -1,0 +1,11 @@
+<div class="ccc-number-container">
+    <h2>{{ titulo }}</h2>
+    <dx-number-box
+      [(value)]="valorInicial"
+      [showClearButton]="botonBorrar"
+      (onValueChanged)="handleValueChanged($event)"
+      [disabled]="disabled"
+    >
+    </dx-number-box>
+  </div>
+  

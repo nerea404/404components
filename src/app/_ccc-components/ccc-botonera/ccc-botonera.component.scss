@@ -1,0 +1,47 @@
+@import "../../../styles/helpers/helpers-dir";
+@import '../../../styles/variables';
+
+::ng-deep {
+  .cabecera-grid-acciones {
+    .column-left {
+      .botones-accion {
+        .add, .eliminar, .editar {
+          &::before {
+            font-family: "icomoon";
+            color: var(--color-texto);
+            font-size: 21px;
+          }
+        }
+
+        .add::before {
+          content: "\e90d";
+        }
+
+        .eliminar::before {
+          content: "\e90a";
+        }
+
+        .editar::before {
+          content: "\e90e";
+        }
+
+        .boton-accion {
+          border-radius: 5.313px;
+          border: 1.063px solid var(--color-fondo-e7);
+          background: #fff;
+          padding: 3.755px 4.25px 4.745px 4.25px;
+          transition: opacity 0.3s ease;
+        }
+
+        .boton-accion:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        .boton-accion:disabled::before {
+          color: #999;
+        }
+      }
+    }
+  }
+}

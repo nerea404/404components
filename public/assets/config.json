@@ -1,0 +1,177 @@
+{
+  "values": {
+    "email": "david@cuatrocientoscuatro.es",
+    "clave": "C@i9yZ2A",
+    "remitenteNombre": "404 Programación",
+    "puertoEnvio": "23"
+  },
+  "config": {
+    "email": {
+      "campo": "Correo",
+      "grupo": "Configuración Básica", "grupo2": "Configuración correo",
+      "tipo": "text",
+      "opciones": null,
+      "validaciones": [
+        {
+          "tipo": "validateRequired",
+          "params": null
+        },
+        {
+          "tipo": "validateEmail",
+          "params": null
+        }
+      ]
+    },
+    "puertoEnvio": {
+      "campo": "Puerto de envío",
+      "grupo": "Configuración Avanzada",
+      "tipo": "select",
+      "opciones": [
+        "25",
+        "587",
+        "465"
+      ],
+      "validaciones": [
+        {
+          "tipo": "validateRequired",
+          "params": null
+        },
+        {
+          "tipo": "validateCorrectOption",
+          "params": [
+            [
+              "25",
+              "587",
+              "465"
+            ]
+          ]
+        }
+      ]
+    },"puertoEnvio2": {
+      "campo": "Puerto de envío 2 ",
+      "grupo": "Configuración Avanzada",
+      "tipo": "select",
+      "opciones": [
+        "25",
+        "587",
+        "465"
+      ],
+      "validaciones": [
+        {
+          "tipo": "validateRequired",
+          "params": null
+        },
+        {
+          "tipo": "validateCorrectOption",
+          "params": [
+            [
+              "25",
+              "587",
+              "465"
+            ]
+          ]
+        }
+      ]
+    },"direccionIp": {
+      "campo": "Direccion IP",
+      "grupo": "Configuración Avanzada","grupo2": "Configuración basica",
+      "tipo": "select",
+      "opciones": [
+        "25",
+        "587",
+        "465"
+      ],
+      "validaciones": [
+        {
+          "tipo": "validateRequired",
+          "params": null
+        },
+        {
+          "tipo": "validateCorrectOption",
+          "params": [
+            [
+              "25",
+              "587",
+              "465"
+            ]
+          ]
+        }
+      ]
+    },
+    "clave": {
+      "campo": "Contraseña",
+      "grupo": "Configuración Básica",
+      "tipo": "password",
+      "opciones": null,
+      "validaciones": [
+        {
+          "tipo": "validateRequired",
+          "params": null
+        },
+        {
+          "tipo": "validateLength",
+          "params": [
+            8,
+            null
+          ]
+        }
+      ]
+    }, 
+    "fecha": {
+      "campo": "Fecha",
+      "grupo": "Configuración Básica","grupo2": "Configuración correo","grupo3": "Configuración correo avanzada",
+      "tipo": "date",
+      "opciones": null,
+      "validaciones": [
+        {
+          "tipo": "validateRequired",
+          "params": null
+        },
+        {
+          "tipo": "validateLength",
+          "params": [
+            8,
+            null
+          ]
+        }
+      ]
+    },"color": {
+      "campo": "Color",
+      "grupo": "Configuración Básica",
+      "tipo": "color",
+      "opciones": null,
+      "validaciones": [
+        {
+          "tipo": "validateRequired",
+          "params": null
+        },
+        {
+          "tipo": "validateLength",
+          "params": [
+            8,
+            null
+          ]
+        }
+      ]
+    },
+    "remitenteNombre": {
+      "campo": "Nombre del remitente",
+      "grupo": "Configuración Básica",
+      "tipo": "text",
+      "opciones": null,
+      "validaciones": [
+        {
+          "tipo": "validateRequired",
+          "params": null
+        },
+        {
+          "tipo": "validateLength",
+          "params": [
+            8,
+            null
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div class="ccc-select-box-container">
+  <h2>{{ titulo }}</h2>
+  <dx-select-box
+    [items]="items"
+    [(value)]="valorInicial"
+    [inputAttr]="{ 'aria-label': ariaLabel }"
+    [showClearButton]="botonBorrar"
+    (onValueChanged)="handleValueChanged($event)"
+    (onFocusIn)="focus.emit($event)"
+    (onFocusOut)="blur.emit($event)"
+    [disabled]="disabled"
+
+  ></dx-select-box>
+</div>

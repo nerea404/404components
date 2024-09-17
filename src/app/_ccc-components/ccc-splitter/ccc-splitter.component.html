@@ -1,0 +1,22 @@
+<div class="splitter-header">
+  <button class="btn-toggle btn-left" (click)="toggleLeftPane()">
+    <i [class]="isLeftPaneVisible ? 'icon-collapse-left' : 'icon-expand-right'"></i>
+  </button>
+  <button class="btn-toggle btn-right" (click)="toggleRightPane()">
+    <i [class]="isRightPaneVisible ? 'icon-collapse-right' : 'icon-expand-left'"></i>
+  </button>
+</div>
+
+<dx-splitter id="splitter">
+  <dxi-item [size]="leftPaneSize" [visible]="isLeftPaneVisible">
+    <ng-content select="[left-pane]"></ng-content>
+  </dxi-item>
+
+  <dxi-item [size]="centerPaneSize">
+    <ng-content select="[central-pane]"></ng-content>
+  </dxi-item>
+
+  <dxi-item [size]="rightPaneSize" [visible]="isRightPaneVisible">
+    <ng-content select="[right-pane]"></ng-content>
+  </dxi-item>
+</dx-splitter>

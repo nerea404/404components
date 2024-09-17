@@ -1,0 +1,140 @@
+[
+    {
+        "id": 1,
+        "nombre": "Illinois Tool Works Inc.",
+        "precio": 20,
+        "iva": 0
+    },
+    {
+        "id": 2,
+        "nombre": "Ocean Power Technologies, Inc.",
+        "precio": 10,
+        "iva": 0
+    },
+    {
+        "id": 3,
+        "nombre": "Whitestone REIT",
+        "precio": 14,
+        "iva": 0
+    },
+    {
+        "id": 4,
+        "nombre": "Diodes Incorporated",
+        "precio": 41.14,
+        "iva": 4
+    },
+    {
+        "id": 5,
+        "nombre": "Exact Sciences Corporation",
+        "precio": 45.5,
+        "iva": 10
+    },
+    {
+        "id": 6,
+        "nombre": "Voya Asia Pacific High Dividend Equity Income Fund",
+        "precio": 4,
+        "iva": 4
+    },
+    {
+        "id": 7,
+        "nombre": "Ark Restaurants Corp.",
+        "precio": 78,
+        "iva": 21
+    },
+    {
+        "id": 8,
+        "nombre": "Virtus Investment Partners, Inc.",
+        "precio": 35.98,
+        "iva": 10
+    },
+    {
+        "id": 9,
+        "nombre": "Icahn Enterprises L.P.",
+        "precio": 445.58,
+        "iva": 21
+    },
+    {
+        "id": 10,
+        "nombre": "Preferred Apartment Communities, Inc.",
+        "precio": 17.43,
+        "iva": 10
+    },
+    {
+        "id": 11,
+        "nombre": "World Wrestling Entertainment, Inc.",
+        "precio": 48,
+        "iva": 10
+    },
+    {
+        "id": 12,
+        "nombre": "Theravance Biopharma, Inc.",
+        "precio": 11,
+        "iva": 21
+    },
+    {
+        "id": 13,
+        "nombre": "e.l.f. Beauty, Inc.",
+        "precio": 84,
+        "iva": 0
+    },
+    {
+        "id": 14,
+        "nombre": "MutualFirst Financial Inc.",
+        "precio": 48.1,
+        "iva": 10
+    },
+    {
+        "id": 15,
+        "nombre": "Atento S.A.",
+        "precio": 52.21,
+        "iva": 4
+    },
+    {
+        "id": 16,
+        "nombre": "Blackrock MuniAssets Fund, Inc.",
+        "precio": 40.56,
+        "iva": 0
+    },
+    {
+        "id": 17,
+        "nombre": "Cushing Renaissance Fund (The)",
+        "precio": 26,
+        "iva": 10
+    },
+    {
+        "id": 18,
+        "nombre": "PNC Financial Services Group, Inc. (The)",
+        "precio": 93.80,
+        "iva": 4
+    },
+    {
+        "id": 19,
+        "nombre": "Kite Realty Group Trust",
+        "precio": 838.22,
+        "iva": 0
+    },
+    {
+        "id": 20,
+        "nombre": "Daily Journal Corp. (S.C.)",
+        "precio": 837.99,
+        "iva": 10
+    },
+    {
+        "id": 21,
+        "nombre": "Kit X",
+        "items": [
+          {
+            "id": 22,
+            "nombre": "Ítem 1 del Kit",
+            "precio": 5.00,
+            "iva": 21
+          },
+          {
+            "id": 23,
+            "nombre": "Ítem 2 del Kit",
+            "precio": 15.00,
+            "iva": 10
+          }
+        ]
+      }
+]

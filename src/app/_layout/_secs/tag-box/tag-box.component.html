@@ -1,0 +1,33 @@
+<h1 class="titulo-sec">TagBox</h1>
+<div class="content-sec">
+  <!-- TagBox con botón borrar -->
+  <app-ccc-tag-box
+    [titulo]="'TagBox con btn borrar'"
+    [valorInicial]="formData.productosSeleccionados"
+    [items]="productos1"
+    [botonBorrar]="true"
+    [ariaLabel]="'Producto'"
+    (valueChanged)="onTagBoxValueChanged1($event)"
+  ></app-ccc-tag-box>
+
+  <!-- TagBox sin botón borrar -->
+  <app-ccc-tag-box
+    [titulo]="'TagBox sin btn borrar'"
+    [valorInicial]="formData.productosSeleccionados"
+    [items]="productos2"
+    [botonBorrar]="false"
+    [ariaLabel]="'Producto'"
+    (valueChanged)="onTagBoxValueChanged2($event)"
+  ></app-ccc-tag-box>
+
+  <!-- TagBox deshabilitado -->
+  <app-ccc-tag-box
+    [titulo]="'TagBox disabled'"
+    [valorInicial]="formData.productosSeleccionados"
+    [items]="productos3"
+    [botonBorrar]="true"
+    [ariaLabel]="'Producto'"
+    [disabled]="true"
+    (valueChanged)="onTagBoxValueChanged3($event)"
+  ></app-ccc-tag-box>
+</div>

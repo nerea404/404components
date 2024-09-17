@@ -1,0 +1,64 @@
+@import "../variables";
+
+@mixin ccc-tabs {
+  dx-tab-panel {
+    background: #e7e7e7;
+    padding: 6px 12px;
+    .dx-tabpanel-tabs {
+      .dx-tabs-wrapper {
+        border: none;
+        background: #e7e7e7;
+
+        .dx-item {
+          background: #e7e7e7;
+          border-radius: 5px 5px 0px 0px;
+          .dx-tab-text-span {
+            color: #1a1a1a;
+    font-family: $font-family-1;;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.1px;
+          }
+        }
+
+        .dx-tab-selected {
+          background: #fff;
+          border-bottom: none;
+          &::after {
+            border-radius: 5px 5px 0px 0px;
+            border-top: 1px solid #dee0e3;
+            border-right: 1px solid #dee0e3;
+            border-left: 1px solid #dee0e3;
+          }
+          .dx-tab-text-span {
+            color: #2c6a8f;
+    font-family: $font-family-1;;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.1px;
+          }
+        }
+
+        &::after {
+          border: none;
+        }
+      }
+    }
+
+    .dx-tabpanel-container {
+      border-right: 1px solid #dee0e3;
+      border-left: 1px solid #dee0e3;
+      background: #fff;
+      padding: 12px;
+
+      .dx-multiview-wrapper {
+        border: none;
+      }
+    }
+  }
+  @content;
+}

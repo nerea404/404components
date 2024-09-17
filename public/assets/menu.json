@@ -1,0 +1,598 @@
+{
+    "Menu": [
+        {
+            "id": 1,
+            "parentId": null,
+            "nombre": "Ventas",
+            "items": [
+                {
+                    "id": 2,
+                    "parentId": 1,
+                    "nombre": "Documentos de ventas",
+                    "isExpanded": true,
+                    "items": [
+                        {
+                            "id": 3,
+                            "parentId": 2,
+                            "nombre": "Presupuestos",
+                            "categoria": "Documentos de ventas",
+                            "tabParams": {
+                                "etiquetaTab": "Paises",
+                                "componenteTab": "ListaPaisComponent",
+                                "paramterosComponente": {}
+                            }
+                        },
+                        {
+                            "id": 4,
+                            "parentId": 2,
+                            "nombre": "Pedidos",
+                            "categoria": "Documentos de ventas",
+                            "tabParams": {
+                                "etiquetaTab": "Formulario",
+                                "componenteTab": "FormClienteComponent",
+                                "paramterosComponente": {}
+                            }
+                        },
+                        {
+                            "id": 5,
+                            "parentId": 2,
+                            "nombre": "Albaranes",
+                            "categoria": "Documentos de ventas",
+                            "tabParams": {
+                                "etiquetaTab": "Albaranes",
+                                "componenteTab": "AlbaranComponent",
+                                "paramterosComponente": {}
+                            }
+                        },
+                        {
+                            "id": 6,
+                            "parentId": 2,
+                            "nombre": "Abonos",
+                            "categoria": "Documentos de ventas",
+                            "tabParams": {
+                                "etiquetaTab": "Clientes",
+                                "componenteTab": "ListaClienteComponent",
+                                "paramterosComponente": {}
+                            }
+                        },
+                        {
+                            "id": 7,
+                            "parentId": 2,
+                            "nombre": "Facturas",
+                            "categoria": "Documentos de ventas",
+                            "tabParams": {
+                                "etiquetaTab": "DataGrid",
+                                "componenteTab": "FichaPaisComponent",
+                                "paramterosComponente": {}
+                            }
+                        },
+                        {
+                            "id": 8,
+                            "parentId": 2,
+                            "nombre": "Facturas proforma",
+                            "categoria": "Documentos de ventas",
+                            "tabParams": {
+                                "etiquetaTab": "Inputs",
+                                "componenteTab": "InputsComponent",
+                                "paramterosComponente": {}
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "parentId": 1,
+                    "nombre": "Clientes",
+                    "isExpanded": true,
+                    "items": [
+                        {
+                            "id": 10,
+                            "parentId": 9,
+                            "nombre": "Clientes",
+                            "categoria": "Clientes",
+                            "items": [
+                                {
+                                    "id": 11,
+                                    "parentId": 10,
+                                    "nombre": "Últimas Noticias",
+                                    "items": [
+                                        {
+                                            "id": 12,
+                                            "parentId": 11,
+                                            "nombre": "Últimas Noticias",
+                                            "items": [
+                                                {
+                                                    "id": 100,
+                                                    "parentId": 12,
+                                                    "nombre": "Últimas Noticias"
+                                                },
+                                                {
+                                                    "id": 101,
+                                                    "parentId": 12,
+                                                    "nombre": "Tendencias"
+                                                },
+                                                {
+                                                    "id": 102,
+                                                    "parentId": 12,
+                                                    "nombre": "Eventos"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 13,
+                                            "parentId": 11,
+                                            "nombre": "Tendencias"
+                                        },
+                                        {
+                                            "id": 14,
+                                            "parentId": 11,
+                                            "nombre": "Eventos"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 15,
+                                    "parentId": 10,
+                                    "nombre": "Tendencias"
+                                },
+                                {
+                                    "id": 16,
+                                    "parentId": 10,
+                                    "nombre": "Eventos"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 17,
+                            "parentId": 9,
+                            "nombre": "Clientes Potenciales",
+                            "categoria": "Clientes",
+                            "items": [
+                                {
+                                    "id": 18,
+                                    "parentId": 17,
+                                    "nombre": "Últimas Noticias",
+                                    "items": [
+                                        {
+                                            "id": 19,
+                                            "parentId": 18,
+                                            "nombre": "Últimas Noticias"
+                                        },
+                                        {
+                                            "id": 20,
+                                            "parentId": 18,
+                                            "nombre": "Tendencias"
+                                        },
+                                        {
+                                            "id": 21,
+                                            "parentId": 18,
+                                            "nombre": "Eventos"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 22,
+                                    "parentId": 17,
+                                    "nombre": "Tendencias"
+                                },
+                                {
+                                    "id": 23,
+                                    "parentId": 17,
+                                    "nombre": "Eventos"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 24,
+                            "parentId": 9,
+                            "nombre": "Familias Clientes",
+                            "categoria": "Clientes",
+                            "items": [
+                                {
+                                    "id": 25,
+                                    "parentId": 24,
+                                    "nombre": "Últimas Noticias",
+                                    "items": [
+                                        {
+                                            "id": 26,
+                                            "parentId": 25,
+                                            "nombre": "Últimas Noticias"
+                                        },
+                                        {
+                                            "id": 27,
+                                            "parentId": 25,
+                                            "nombre": "Tendencias"
+                                        },
+                                        {
+                                            "id": 28,
+                                            "parentId": 25,
+                                            "nombre": "Eventos"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 29,
+                                    "parentId": 24,
+                                    "nombre": "Tendencias"
+                                },
+                                {
+                                    "id": 30,
+                                    "parentId": 24,
+                                    "nombre": "Eventos"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 31,
+                            "parentId": 9,
+                            "nombre": "Subfamilias clientes",
+                            "categoria": "Clientes",
+                            "items": [
+                                {
+                                    "id": 32,
+                                    "parentId": 31,
+                                    "nombre": "Últimas Noticias",
+                                    "items": [
+                                        {
+                                            "id": 33,
+                                            "parentId": 32,
+                                            "nombre": "Últimas Noticias"
+                                        },
+                                        {
+                                            "id": 34,
+                                            "parentId": 32,
+                                            "nombre": "Tendencias"
+                                        },
+                                        {
+                                            "id": 35,
+                                            "parentId": 32,
+                                            "nombre": "Eventos"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 36,
+                                    "parentId": 31,
+                                    "nombre": "Tendencias"
+                                },
+                                {
+                                    "id": 37,
+                                    "parentId": 31,
+                                    "nombre": "Eventos"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 38,
+                    "parentId": 1,
+                    "nombre": "Cobros",
+                    "isExpanded": true,
+                    "items": [
+                        {
+                            "id": 39,
+                            "parentId": 38,
+                            "nombre": "Cobros",
+                            "categoria": "Cobros",
+                            "items": [
+                                {
+                                    "id": 40,
+                                    "parentId": 39,
+                                    "nombre": "Últimas Noticias",
+                                    "items": [
+                                        {
+                                            "id": 41,
+                                            "parentId": 40,
+                                            "nombre": "Últimas Noticias"
+                                        },
+                                        {
+                                            "id": 42,
+                                            "parentId": 40,
+                                            "nombre": "Tendencias"
+                                        },
+                                        {
+                                            "id": 43,
+                                            "parentId": 42,
+                                            "nombre": "Eventos"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 44,
+                                    "parentId": 39,
+                                    "nombre": "Tendencias"
+                                },
+                                {
+                                    "id": 45,
+                                    "parentId": 39,
+                                    "nombre": "Eventos"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 46,
+                            "parentId": 38,
+                            "nombre": "Cartas de reclamaciones",
+                            "categoria": "Cobros",
+                            "items": [
+                                {
+                                    "id": 47,
+                                    "parentId": 46,
+                                    "nombre": "Últimas Noticias",
+                                    "items": [
+                                        {
+                                            "id": 48,
+                                            "parentId": 47,
+                                            "nombre": "Últimas Noticias"
+                                        },
+                                        {
+                                            "id": 49,
+                                            "parentId": 47,
+                                            "nombre": "Tendencias"
+                                        },
+                                        {
+                                            "id": 50,
+                                            "parentId": 47,
+                                            "nombre": "Eventos"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 51,
+                                    "parentId": 46,
+                                    "nombre": "Tendencias"
+                                },
+                                {
+                                    "id": 52,
+                                    "parentId": 46,
+                                    "nombre": "Eventos"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 53,
+                            "parentId": 38,
+                            "nombre": "Vencimientos",
+                            "categoria": "Cobros",
+                            "items": [
+                                {
+                                    "id": 54,
+                                    "parentId": 53,
+                                    "nombre": "Últimas Noticias",
+                                    "items": [
+                                        {
+                                            "id": 55,
+                                            "parentId": 54,
+                                            "nombre": "Últimas Noticias"
+                                        },
+                                        {
+                                            "id": 56,
+                                            "parentId": 54,
+                                            "nombre": "Tendencias"
+                                        },
+                                        {
+                                            "id": 57,
+                                            "parentId": 54,
+                                            "nombre": "Eventos"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 58,
+                                    "parentId": 53,
+                                    "nombre": "Tendencias"
+                                },
+                                {
+                                    "id": 59,
+                                    "parentId": 53,
+                                    "nombre": "Eventos"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 60,
+                            "parentId": 38,
+                            "nombre": "Remesa bancaria",
+                            "categoria": "Cobros",
+                            "items": [
+                                {
+                                    "id": 61,
+                                    "parentId": 60,
+                                    "nombre": "Últimas Noticias",
+                                    "items": [
+                                        {
+                                            "id": 62,
+                                            "parentId": 61,
+                                            "nombre": "Últimas Noticias"
+                                        },
+                                        {
+                                            "id": 63,
+                                            "parentId": 61,
+                                            "nombre": "Tendencias"
+                                        },
+                                        {
+                                            "id": 64,
+                                            "parentId": 61,
+                                            "nombre": "Eventos"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 65,
+                                    "parentId": 60,
+                                    "nombre": "Tendencias"
+                                },
+                                {
+                                    "id": 66,
+                                    "parentId": 60,
+                                    "nombre": "Eventos"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 67,
+            "parentId": null,
+            "nombre": "Compras",
+            "items": [
+                {
+                    "id": 68,
+                    "parentId": 67,
+                    "nombre": "Consultoría",
+                    "isExpanded": true,
+                    "items": [
+                        {
+                            "id": 69,
+                            "parentId": 68,
+                            "nombre": "Estrategia"
+                        },
+                        {
+                            "id": 70,
+                            "parentId": 68,
+                            "nombre": "Optimización"
+                        }
+                    ]
+                },
+                {
+                    "id": 71,
+                    "parentId": 7,
+                    "nombre": "Desarrollo",
+                    "isExpanded": true,
+                    "items": [
+                        {
+                            "id": 72,
+                            "parentId": 11,
+                            "nombre": "Aplicaciones Web"
+                        },
+                        {
+                            "id": 73,
+                            "parentId": 11,
+                            "nombre": "Aplicaciones Móviles"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 74,
+            "parentId": null,
+            "nombre": "Articulos",
+            "items": [
+                {
+                    "id": 75,
+                    "parentId": 74,
+                    "nombre": "Electrónica",
+                    "isExpanded": true,
+                    "items": [
+                        {
+                            "id": 76,
+                            "parentId": 75,
+                            "nombre": "Teléfonos"
+                        },
+                        {
+                            "id": 77,
+                            "parentId": 75,
+                            "nombre": "Computadoras"
+                        }
+                    ]
+                },
+                {
+                    "id": 78,
+                    "parentId": 74,
+                    "nombre": "Ropa",
+                    "isExpanded": true,
+                    "items": [
+                        {
+                            "id": 79,
+                            "parentId": 78,
+                            "nombre": "Hombres"
+                        },
+                        {
+                            "id": 80,
+                            "parentId": 78,
+                            "nombre": "Mujeres"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81,
+            "parentId": null,
+            "nombre": "TPV",
+            "items": [
+                {
+                    "id": 82,
+                    "parentId": 81,
+                    "isExpanded": true,
+                    "nombre": "Preguntas Frecuentes"
+                },
+                {
+                    "id": 83,
+                    "parentId": 81,
+                    "isExpanded": true,
+                    "nombre": "Centro de Ayuda"
+                }
+            ]
+        },
+        {
+            "id": 84,
+            "parentId": null,
+            "nombre": "Almacen",
+            "items": [
+                {
+                    "id": 85,
+                    "parentId": 84,
+                    "isExpanded": true,
+                    "nombre": "Formulario de Contacto"
+                },
+                {
+                    "id": 86,
+                    "parentId": 84,
+                    "isExpanded": true,
+                    "nombre": "Ubicación"
+                }
+            ]
+        },
+        {
+            "id": 87,
+            "parentId": null,
+            "isExpanded": true,
+            "nombre": "Inventario",
+            "items": [
+                {
+                    "id": 88,
+                    "parentId": 87,
+                    "nombre": "Formulario de Contacto"
+                },
+                {
+                    "id": 89,
+                    "parentId": 87,
+                    "nombre": "Ubicación"
+                }
+            ]
+        },
+        {
+            "id": 90,
+            "parentId": null,
+            "isExpanded": true,
+            "nombre": "Contabilidad",
+            "items": [
+                {
+                    "id": 91,
+                    "parentId": 90,
+                    "nombre": "Formulario de Contacto"
+                },
+                {
+                    "id": 92,
+                    "parentId": 90,
+                    "nombre": "Ubicación"
+                }
+            ]
+        }
+    ]
+}

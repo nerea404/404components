@@ -1,0 +1,13 @@
+::ng-deep {
+  .header {
+    padding: 20px 40px;
+    background-color: var(--color-principal);
+    .col-1 {
+      .titulo {
+        margin: 0px;
+        color: #fff;
+        font-family: 'Noto Sans';
+      }
+    }
+  }
+}

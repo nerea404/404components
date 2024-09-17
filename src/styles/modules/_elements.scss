@@ -1,0 +1,104 @@
+@mixin anotaciones-productos() {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      > button {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        border-radius: 4px;
+        background: #C2C2C2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        padding: 10px;
+
+        &.observaciones {
+          background: $color-1;
+        }
+
+        span {
+          color: #fff;
+        }
+      }
+
+      > div {
+        display: flex;
+        padding-left: 32px;
+
+        &:not(last-child)  {
+          margin-bottom: 1rem;
+        }
+
+        span {
+          font-family: $font-family-1;
+          flex: 0 1 auto;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 15px;
+          letter-spacing: 0em;
+          text-align: left;
+          margin-right: 0.5rem;
+
+          &.codigo-producto {
+            color: $color-1;
+          }
+
+          &.marca-producto {
+            color: $color-3;
+          }
+
+          &.nombre-producto {
+            color: $color-2;
+            font-weight: 500;
+          }
+        }
+
+        p {
+          font-family: $font-family-1;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 15px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.col-num {
+  text-align: right !important;
+}
+
+.icon-editar-container {
+  background-color: #fff;
+ /* width: 17px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+  color: $color-1;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 2px;
+
+  span {
+    &::before {
+      color: $color-1 !important;
+    }
+  }
+
+}

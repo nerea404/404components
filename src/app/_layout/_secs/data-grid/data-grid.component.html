@@ -1,0 +1,35 @@
+<h1 class="titulo-sec">Data Grid</h1>
+
+<app-ccc-datagrid
+  [dataSource]="paises"
+  keyExpr="idPais"
+  [showBorders]="true"
+  [focusedRowEnabled]="true"
+  [allowAdding]="false"
+  [allowUpdating]="false"
+  [allowDeleting]="false"
+  [columns]="[
+    { dataField: 'nombre', caption: 'Nombre', width: 100 },
+    {
+      dataField: 'idMoneda',
+      caption: 'Moneda',
+      lookup: {
+        dataSource: monedas,
+        displayExpr: 'nombre',
+        valueExpr: 'idMoneda'
+      }
+    },
+    {
+      dataField: 'idIdioma',
+      caption: 'Idioma',
+      lookup: {
+        dataSource: idiomas,
+        displayExpr: 'nombre',
+        valueExpr: 'idIdioma'
+      }
+    }
+  ]"
+  (focusedRowChanged)="onFocusedRowChanged($event)"
+  (saved)="onSaved($event)"
+></app-ccc-datagrid>
+

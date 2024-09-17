@@ -1,0 +1,62 @@
+@mixin titulo-tab-empleados {
+  color: $color-variante-complementario;
+  font-family: $font-family-1;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  margin-bottom: 10px;
+}
+
+@mixin titulo-graficos-horario {
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: $font-family-1;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.1px;
+}
+
+@mixin barlow-regular {
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@mixin barlow-regular-italic {
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin barlow-medium {
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin barlow-semibold {
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+
+@mixin barlow-bold {
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin label-input{
+  color: #121c2d;
+  font-family: $font-family-1;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.1px;
+  margin-bottom: 2px;
+
+}

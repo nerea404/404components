@@ -1,0 +1,22 @@
+<h1 class="titulo-sec">Form Number</h1>
+
+<div class="content-sec">
+  <app-ccc-number
+    [titulo]="'Número'"
+    [valorInicial]="formData.numero"
+    [botonBorrar]="true"
+    (valueChanged)="onNumberValueChanged($event)"
+  ></app-ccc-number>
+
+  <app-ccc-number
+    [titulo]="'Número sin botón borrar'"
+    [botonBorrar]="false"
+    (valueChanged)="onNumberValueChanged($event)"
+  ></app-ccc-number>
+
+  <app-ccc-number
+    [titulo]="'Número disabled'"
+    [botonBorrar]="false"
+    [disabled]="true"
+    (valueChanged)="onNumberValueChanged($event)"
+  ></app-ccc-number>

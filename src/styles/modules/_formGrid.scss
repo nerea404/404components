@@ -1,0 +1,473 @@
+@import "/src/styles/base/variables";
+@import "/src/styles/helpers/mixins";
+@import "/src/styles/helpers/fonts";
+
+:host ::ng-deep {
+  .ui-table-scrollable-wrapper {
+    min-height: 400px;
+  }
+
+  .ui-table-scrollable-body {
+    max-height: 550px;
+  }
+
+  .page-options {
+    ul.opciones {
+      li {
+        display: inline-block;
+        margin-right: .5rem;
+      }
+    }
+  }
+
+
+  .ui-table-scrollable-header, .ui-table-scrollable-footer {
+    overflow: inherit;
+    border: 0 none;
+  }
+
+  .ui-table-scrollable-body {
+    //overflow: inherit !important; //Para que el dropdown no mueva(scroll) el contenido de la tabla
+  }
+
+  .ui-table .ui-table-thead > tr > th {
+    padding: .4rem 0.857rem;
+    border: none;
+    font-weight: 700;
+    color: white;
+    background-color: #2E4265;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .ui-table .ui-table-thead > tr > th:first-child {
+    border-radius: 20px 0px 0px 0px;
+  }
+
+  .ui-table .ui-table-thead > tr > th:last-child {
+    border-radius: 0px 20px 0px 0px;
+  }
+
+  .pi-sort-up::before {
+    content: "\e933";
+    color: $color-1;
+  }
+
+  .pi-sort-down::before {
+    content: "\e930";
+    color: $color-1;
+  }
+
+  .pi-sort::before {
+    content: "";
+  }
+
+  .pi-sort {
+    display: none;
+  }
+
+  .ui-table .ui-sortable-column:not(.ui-state-highlight):hover {
+    background-color: $color-2;
+    color: white;
+  }
+
+  .ui-table .ui-table-tbody > tr {
+    background-color: white;
+  }
+
+  .ui-table .ui-table-tbody > tr:nth-child(even) {
+    background-color: white;
+  }
+
+  .ui-table-scrollable-view {
+    input {
+      width: 100%;
+    }
+  }
+
+  .ui-table .ui-table-tbody > tr > td {
+    padding: .4rem 0.857rem;
+  }
+
+  .ui-table .ui-table-tbody > tr > td {
+    background-color: inherit;
+    border: none;
+    //border-bottom: 1px solid #c8c8c8;
+    //border-bottom: 1px solid rgba(200,200,200, 0.5);
+    /*background-image: linear-gradient(to right, rgba(112, 112, 112, 0.20)  50%, rgba(255, 255, 255, 0) 20%);
+    background-position: top;
+    background-size: 100px 2px;
+    background-repeat: repeat-x;*/
+
+    font-family: $font-family-1;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5A5A5A;
+    letter-spacing: 0.3pt;
+    line-height: 22px;
+  }
+
+  .ui-table .ui-table-tbody > tr.ui-state-highlight td, .ui-table .ui-table-tbody > tr:nth-child(2n).ui-state-highlight td {
+    color: #5A5A5A;
+    font-weight: 700;
+  }
+
+  .ui-table .ui-paginator-bottom {
+    border-top: 0 none;
+    padding: 15px 0px;
+  }
+
+  .ui-paginator {
+    background-color: #fff;
+    border:none;
+    border-top: 1px solid #c8c8c8;
+    padding: 0;
+  }
+
+  .ui-table .ui-table-summary {
+    background-color: #2E4265;
+    color: white;
+    border: none;
+    padding: 5px 0px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    border-top: 0 none;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.3pt;
+    line-height: 30px;
+  }
+
+  .ui-table-scrollable-header-box {
+    margin: 0 !important;
+  }
+
+
+  .ui-table .ui-table-tbody > tr.ui-state-highlight, .ui-table .ui-table-tbody > tr:nth-child(2n).ui-state-highlight {
+    //background-color: rgba(46, 66, 101, 0.25);
+    background-color: #E2FBF8;
+    color: #fff;
+
+    .dropdown-fila {
+      .dropdown-toggle {
+        i {
+          color: white;
+        }
+      }
+    }
+
+  }
+
+  .ui-table{
+    td.selectable {
+      color: $color-1 !important;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    td.options-col {
+      width: 5em;
+      text-align: center;
+    }
+  }
+
+  .btn-dt {
+    display: inline-block;
+    background: none;
+    border: none;
+    height: auto;
+
+    span {
+      width: 26px;
+      height: 26px;
+      font-size: 26px;
+      color: white;
+
+      &.icon-imprimir {
+        font-size: 20px;
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+
+  .dropdown {
+    button {
+      border: none;
+      background: transparent;
+    }
+
+    .dropdown-link {
+      i {
+        color: $color-1;
+        position: relative;
+        top: 3px;
+      }
+    }
+
+    .dropdown-toggle {
+      background: transparent;
+      padding: 0;
+
+      &::after{
+        display: none;
+      }
+
+      i {
+        color: $color-1;
+      }
+
+      .dropdown-link {
+        svg {
+          width: 24px;
+          fill: white;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      right: 0;
+      left:auto;
+    }
+  }
+
+
+  .ui-table .ui-table-tbody > tr.row-expander {
+    display: none;
+    background-color: #E8E8E8;
+
+    @media #{$xs-sm} {
+      display: table-row;
+    }
+
+    td{
+      padding: 0;
+      text-align: center;
+      line-height: 1px;
+    }
+
+    .row-toggler {
+      padding: 3px 0px;
+      width: 100%;
+      display: inline-block;
+
+      &.row-expanded{
+        svg {
+          -webkit-transform: rotate(-90deg);
+          -moz-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+          -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+        }
+      }
+
+      &.row-hidden {
+        svg {
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+        }
+      }
+
+      svg {
+        width: 16px;
+        fill: #fff;
+      }
+    }
+  }
+
+  .row-expansion {
+    * {
+      text-align: left;
+    }
+  }
+
+  @media #{$xs-sm} {
+    .ui-table .ui-table-thead > tr > th {
+      padding: 0;
+      font-size: 14px;
+      text-align: center;
+
+      &:first-child {
+        padding: 0;
+        padding-left: 10px;
+      }
+    }
+
+    .ui-table .ui-table-tbody > tr > td {
+      padding: 6px 0px;
+      font-size: 14px;
+      text-align: center;
+
+      &:first-child {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .grid-form {
+    .form-group {
+      .ui-chkbox-label {
+        margin: 0 0 0 .5em;
+      }
+    }
+  }
+}
+
+.dropdown-menu.show {
+  display: block;
+  left: auto !important;
+  right: 0 !important;
+}
+
+.options-col {
+
+  .btn {
+    padding: 0.08rem .5rem;
+
+    i.material-icons {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  .dropdown-menu {
+
+    background: $color-2;
+
+    .dropdown-item {
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5pt;
+
+      &:focus, &:hover {
+        color: $color-2;
+        text-decoration: none;
+        background-color: #E2FBF8;
+      }
+    }
+  }
+}
+
+.delete-btn {
+  background: none;
+  padding: 0;
+  border: none;
+  margin-left: 5px;
+
+  svg {
+    width: 15px;
+  }
+}
+
+.grid-form {
+  .form-group {
+    margin-bottom: 0;
+
+    input, select {
+      border-radius: none;
+      box-shadow: none;
+      border: none !important;
+      padding: 0px 10px;
+      font-family: 'Roboto';
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 30px;
+      background: rgba(249, 249, 249, 1) !important;
+    }
+
+    .ui-chkbox-label {
+      margin: 0 0 0 .5em;
+    }
+  }
+}
+
+
+
+/* Column Priorities */
+@media only all {
+  th.ui-p-6,
+  td.ui-p-6,
+  th.ui-p-5,
+  td.ui-p-5,
+  th.ui-p-4,
+  td.ui-p-4,
+  th.ui-p-3,
+  td.ui-p-3,
+  th.ui-p-2,
+  td.ui-p-2,
+  th.ui-p-1,
+  td.ui-p-1 {
+    display: none;
+  }
+}
+
+/* Show priority 1 at 320px (20em x 16px) */
+@media screen and (min-width: 0) {
+  th.ui-p-1,
+  td.ui-p-1 {
+    display: table-cell;
+  }
+}
+
+/* Show priority 2 at 576px (30em x 16px) */
+@media screen and (min-width: 576px) {
+  th.ui-p-2,
+  td.ui-p-2 {
+    display: table-cell;
+  }
+}
+
+/* Show priority 3 at 768px */
+@media screen and (min-width: 768px) {
+  th.ui-p-3,
+  td.ui-p-3 {
+    display: table-cell;
+  }
+}
+
+/* Show priority 4 at 800px (50em x 16px) */
+@media screen and (min-width: 992px) {
+  th.ui-p-4,
+  td.ui-p-4 {
+    display: table-cell;
+  }
+}
+
+/* Show priority 5 at 1200px (60em x 16px) */
+@media screen and (min-width: 1200px) {
+  th.ui-p-5,
+  td.ui-p-5 {
+    display: table-cell;
+  }
+}
+
+/* Show priority 6 at 1920px (70em x 16px) */
+@media screen and (min-width: 1920px) {
+  th.ui-p-6,
+  td.ui-p-6 {
+    display: table-cell;
+  }
+}
+
+/*.row-toggler {
+  margin-top: 10px;
+  display: none;
+
+  @media #{$xs-max} {
+    display: inline-block;
+  }
+
+  i {
+    font-size: 20px;
+  }
+}*/
+
+.row-expansion {
+  @media (min-width: 576px) {
+    display: none;
+  }
+}

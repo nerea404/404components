@@ -1,0 +1,189 @@
+@mixin header-dialog-1() {
+  position: relative;
+  background-color: $color-1;
+  padding: 12px 30px;
+  margin: 0;
+
+  h1 {
+    font-family: $font-family-1;
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0;
+
+    .icon-editar-container {
+        margin-right: 15px;
+    }
+  }
+
+  a.closebtn {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    font-size: 15px;
+    float: none;
+    color: #fff !important;
+  }
+}
+
+/*.cdk-overlay-pane.informacion-dialog {
+  .mat-dialog-container {
+    .mat-dialog-content {
+      .icon-message {
+        max-width: 50px;
+        font-size: 50px;
+        margin-bottom: 1rem;
+        color: #116F9A;
+      }
+      p {
+        font-family: Ubuntu;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #333333;
+      }
+    }
+
+    .mat-dialog-actions {
+      .confirm-btn {
+        width: 100%;
+        display: block;
+        border: none;
+        float: right;
+        max-width: 100px !important;
+        padding: 9px 0px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+
+        font-family: Ubuntu;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: center;
+        text-transform: none;
+
+      }
+    }
+  }
+}*/
+
+.confirmation-dialog {
+  .mat-dialog-container {
+    padding: 0;
+    border-radius: 8px;
+  }
+}
+
+.observacion-producto-dialog {
+  width: 550px;
+  min-height: 420px;
+
+  .mat-dialog-container {
+    padding: 0;
+    border-radius: 8px;
+  }
+}
+
+.movimiento-data-dialog {
+  max-height: 90vh;
+  width: 100%;
+  max-width: 760px;
+
+  .mat-dialog-container {
+    position: relative;
+    width: 98%;
+    height: auto;
+
+    .mat-dialog-content {
+      min-height: 100%;
+
+      .icon-message {
+        max-width: 50px;
+        font-size: 50px;
+        margin-bottom: 1rem;
+        color: #116F9A;
+      }
+      p {
+        font-family: Ubuntu;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #333333;
+      }
+    }
+
+    .mat-dialog-actions {
+
+    }
+  }
+}
+
+.informacion-dialog  {
+  width: 550px !important;
+  min-height: auto;
+
+  .mat-dialog-container {
+    padding: 0;
+    border-radius: 8px;
+  }
+}
+/*
+[mat-dialog-title] {
+  overflow: hidden;
+
+  a.closebtn {
+    background: transparent;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    color: $color-1 !important;
+
+    position: relative;
+    top: 0;
+    right: 0;
+    //font-size: 32px;
+    font-size: 16px;
+    float: right;
+
+    &:hover {
+        text-decoration: none;
+    }
+  }
+}
+*/
+
+
+.descuentos-cantidad-dialog {
+  max-height: 95vh;
+  max-width: 80vw;
+  min-width: 420px;
+
+  .mat-dialog-container {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+
+    .mat-dialog-content {
+      /*max-height: 80vh;
+      box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.16);*/
+    }
+  }
+}

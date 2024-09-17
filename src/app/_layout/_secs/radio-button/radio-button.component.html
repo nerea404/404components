@@ -1,0 +1,15 @@
+<h1 class="titulo-sec">Radio Button</h1>
+<div class="content-sec">
+  <app-ccc-radio-button-group
+    [titulo]="'Radio con opciones variadas'"
+    [opciones]="formData.opciones1"
+    (valueChanged)="onRadioValueChanged1($event)"
+  ></app-ccc-radio-button-group>
+
+  <app-ccc-radio-button-group
+    [titulo]="'Radio disabled'"
+    [opciones]="formData.opciones3"
+    (valueChanged)="onRadioValueChanged3($event)"
+    [disabled]="true"
+  ></app-ccc-radio-button-group>
+</div>

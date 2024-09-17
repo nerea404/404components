@@ -1,0 +1,14 @@
+<div class="ccc-tab-container">
+
+<dx-tab-panel>
+    <dxi-item *ngFor="let tab of tabs" [title]="tab.title">
+      <ng-container *ngIf="tab.component">
+        <ng-container *ngComponentOutlet="tab.component"></ng-container>
+      </ng-container>
+      <ng-container *ngIf="!tab.component">
+        <div [innerHTML]="tab.content"></div>
+      </ng-container>
+    </dxi-item>
+  </dx-tab-panel>
+</div>
+  

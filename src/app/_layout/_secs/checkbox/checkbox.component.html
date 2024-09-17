@@ -1,0 +1,15 @@
+<h1 class="titulo-sec">Checkbox Group</h1>
+<div class="content-sec">
+  <app-ccc-checkbox-group
+    [titulo]="'Checkbox'"
+    [checkboxes]="formData.opciones1"
+    (valueChanged)="onCheckboxValueChanged1($event)"
+  ></app-ccc-checkbox-group>
+
+  <app-ccc-checkbox-group
+    [titulo]="'Checkbox disabled'"
+    [checkboxes]="formData.opciones3"
+    (valueChanged)="onCheckboxValueChanged3($event)"
+    [disabled]="true"
+  ></app-ccc-checkbox-group>
+</div>

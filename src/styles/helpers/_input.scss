@@ -1,0 +1,295 @@
+@import "../variables";
+
+@mixin ccc-text-container {
+  .ccc-text-container {
+    h2 {
+      @include label-input;
+    }
+
+    dx-text-box {
+      border-radius: 4px;
+      border: 1px solid #8891aa;
+      background: #fff;
+
+      input {
+        padding: 6px 8px;
+        min-height: auto;
+
+        color: var(--color-texto);
+        font-family: $font-family-1;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.1px;
+        text-transform: uppercase;
+      }
+    }
+
+    .dx-state-disabled {
+      border-radius: 4px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      background: #dedede;
+      input {
+        color:#8f8f8f;
+        font-family:var(--tipografia);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.1px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  @content;
+}
+
+@mixin ccc-number-container {
+  h2 {
+    @include label-input;
+  }
+
+  dx-number-box {
+    border-radius: 4px;
+    border: 1px solid #8891aa;
+    background: #fff;
+
+    input {
+      padding: 6px 8px;
+      min-height: auto;
+
+      color: var(--color-texto);
+      font-family: $font-family-1;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+    }
+  }
+  .dx-state-disabled {
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #dedede;
+    input {
+      color:#8f8f8f;
+      font-family:var(--tipografia);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+    }
+  }
+  @content;
+}
+
+@mixin ccc-boton {
+  .boton-accion {
+    border-radius: 5.313px;
+    border: 1.063px solid #e7e7e7;
+    background: #fff;
+    padding: 3.755px 4.25px 4.745px 4.25px;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .boton-accion:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  @content;
+}
+
+@mixin ccc-checkbox {
+  h2 {
+    @include label-input;
+  }
+
+  .checkbox-container {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    line-height: 0px;
+
+    div {
+      line-height: 0px;
+
+      .dx-checkbox-checked {
+        .dx-checkbox-icon {
+          font: 17px / 1 DXIcons;
+        }
+      }
+
+      dx-check-box {
+        .dx-checkbox-container {
+          .dx-checkbox-icon {
+            width: 18px;
+            height: 18px;
+            border-radius: 4.582px;
+            border: 1.432px solid var(--color-principal);
+            background: #ecedef;
+          }
+
+          .dx-checkbox-text {
+            color: var(--color-texto);
+            font-family: $font-family-1;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.1px;
+          }
+        }
+      }
+    }
+  }
+  @content;
+}
+
+@mixin ccc-radio-button {
+  h2 {
+    @include label-input;
+  }
+
+  dx-radio-group {
+    .dx-widget {
+      display: flex;
+      gap: 24px;
+      .dx-item {
+        .dx-radio-value-container {
+          .dx-radiobutton-icon {
+            border-radius: 4.582px;
+            border: 1.432px solid #2c6a8f;
+            background: #ecedef;
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+
+      .dx-radiobutton-checked {
+        .dx-radio-value-container {
+          .dx-radiobutton-icon {
+            .dx-radiobutton-icon-dot {
+              border-radius: 4.582px;
+              border-width: 2px;
+              background-color: #2c6a8f;
+            }
+          }
+        }
+      }
+    }
+  }
+  @content;
+}
+
+@mixin ccc-select-box {
+  h2 {
+    @include label-input;
+  }
+
+  dx-select-box {
+    border-radius: 4px;
+    border: 1px solid #8891aa;
+    background: #fff;
+
+    input {
+      padding: 6px 8px;
+      min-height: auto;
+
+      color: var(--color-texto);
+      font-family: $font-family-1;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+    }
+    .dx-placeholder {
+      color: var(--color-texto);
+      font-family: $font-family-1;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.1px;
+    }
+  }
+  .dx-state-disabled {
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #dedede;
+    input {
+      color:#8f8f8f;
+      font-family:var(--tipografia);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+    }
+  }
+  @content;
+}
+
+@mixin ccc-tag-box {
+  h2 {
+    @include label-input;
+  }
+
+  dx-tag-box {
+    border-radius: 4px;
+    border: 1px solid #8891aa;
+    background: #fff;
+
+    input {
+      padding: 6px 8px;
+      min-height: auto;
+
+      color: var(--color-texto);
+      font-family: $font-family-1;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+    }
+    .dx-placeholder {
+      color: var(--color-texto);
+      font-family: $font-family-1;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.1px;
+    }
+  }
+  .dx-state-disabled {
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #dedede;
+    input {
+      color:#8f8f8f;
+      font-family:var(--tipografia);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+    }
+  }
+  @content;
+}

@@ -1,0 +1,31 @@
+<h1 class="titulo-sec">Select</h1>
+<div class="content-sec">
+  <app-ccc-select-box
+    [titulo]="'Select con btn borrar'"
+    [valorInicial]="formData.productoSeleccionado"
+    [items]="productos1"
+    [botonBorrar]="true"
+    [ariaLabel]="'Producto'"
+    (valueChanged)="onSelectValueChanged1($event)"
+  ></app-ccc-select-box>
+  <!-- Texto habilitado sin botón borrar -->
+  <app-ccc-select-box
+    [titulo]="'Select sin btn borrar'"
+    [valorInicial]="formData.productoSeleccionado"
+    [items]="productos2"
+    [botonBorrar]="false"
+    [ariaLabel]="'Producto'"
+    (valueChanged)="onSelectValueChanged2($event)"
+  ></app-ccc-select-box>
+
+  <!-- Texto deshabilitado-->
+  <app-ccc-select-box
+    [titulo]="'Select disabled'"
+    [valorInicial]="formData.productoSeleccionado"
+    [items]="productos3"
+    [botonBorrar]="true"
+    [ariaLabel]="'Producto'"
+    [disabled]="true"
+    (valueChanged)="onSelectValueChanged3($event)"
+  ></app-ccc-select-box>
+</div>

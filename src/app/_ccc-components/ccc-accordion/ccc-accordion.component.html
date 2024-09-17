@@ -1,0 +1,17 @@
+<div class="ccc-accordion-container">
+
+<dx-accordion
+  #accordion
+  [multiple]="true"
+  [collapsible]="true"
+>
+  <dxi-item *ngFor="let section of sections" [title]="section.title" [expanded]="section.isOpened">
+    <ng-container *ngIf="section.component">
+      <ng-container *ngComponentOutlet="section.component"></ng-container>
+    </ng-container>
+    <ng-container *ngIf="!section.component">
+      <div [innerHTML]="section.content"></div>
+    </ng-container>
+  </dxi-item>
+</dx-accordion>
+</div>
