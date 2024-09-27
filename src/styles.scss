@@ -1,18 +1,22 @@
+@import "../src/styles/base/fonts";
 :root {
-    --color-principal: #2c6a8f;
-    --color-principal-claro: #408cbe;
-    --color-estado-active: #d0dbe1;
-    --color-texto: #1a1a1a;
-    --color-disabled: #8f8f8f;
-    --color-sombra: #dee0e3;
-    --color-bordes: #dedede;
-    --color-blanco: #ffffff;
-    --color-fondo: #f9f9f9;
-    --color-fondo-e7: #e7e7e7;
-    --color-ico-submenu: #637381;
-  
-  
-    --tipografia: "NotoSans";
-  
-    // var(--color-sombra)
-  }
+  --color-principal: #2c6a8f;
+  --color-principal-claro: #408cbe;
+  --color-estado-active: #d0dbe1;
+  --color-texto: #1a1a1a;
+  --color-disabled: #8f8f8f;
+  --color-sombra: #dee0e3;
+  --color-bordes: #dedede;
+  --color-blanco: #ffffff;
+  --color-fondo: #f9f9f9;
+  --color-fondo-e7: #e7e7e7;
+  --color-ico-submenu: #637381;
+  --color-text-input: #121c2d;
+  --color-bordes-input: #1379a8;
+  --color-error: #b71d18;
+  --color-aceptado: #13873D;
+
+  --tipografia: "NotoSans";
+
+  // var(--color-text-input)
+}

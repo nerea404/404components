@@ -1,6 +1,7 @@
 @mixin titulo-tab-empleados {
   color: $color-variante-complementario;
-  font-family: $font-family-1;
+  font-family: var(--tipografia);
+;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -11,7 +12,8 @@
 
 @mixin titulo-graficos-horario {
   font-feature-settings: "clig" off, "liga" off;
-  font-family: $font-family-1;
+  font-family: var(--tipografia);
+;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -50,8 +52,8 @@
 }
 
 @mixin label-input{
-  color: #121c2d;
-  font-family: $font-family-1;
+  color: var(--color-text-input);
+  font-family: var(--tipografia);
   font-size: 11px;
   font-style: normal;
   font-weight: 500;

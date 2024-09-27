@@ -2,19 +2,20 @@
 
 @mixin ccc-tabs {
   dx-tab-panel {
-    background: #e7e7e7;
+    background: var(--color-fondo-e7);
     padding: 6px 12px;
     .dx-tabpanel-tabs {
       .dx-tabs-wrapper {
         border: none;
-        background: #e7e7e7;
+        background: var(--color-fondo-e7);
 
         .dx-item {
-          background: #e7e7e7;
+          background: var(--color-fondo-e7);
           border-radius: 5px 5px 0px 0px;
           .dx-tab-text-span {
-            color: #1a1a1a;
-    font-family: $font-family-1;;
+            color: var(--color-texto);
+    font-family: var(--tipografia);
+;
             font-size: 12px;
             font-style: normal;
             font-weight: 500;
@@ -28,13 +29,14 @@
           border-bottom: none;
           &::after {
             border-radius: 5px 5px 0px 0px;
-            border-top: 1px solid #dee0e3;
-            border-right: 1px solid #dee0e3;
-            border-left: 1px solid #dee0e3;
+            border-top: 1px solid var(--color-sombra);
+            border-right: 1px solid var(--color-sombra);
+            border-left: 1px solid var(--color-sombra);
           }
           .dx-tab-text-span {
-            color: #2c6a8f;
-    font-family: $font-family-1;;
+            color: var(--color-principal);
+    font-family: var(--tipografia);
+;;
             font-size: 12px;
             font-style: normal;
             font-weight: 600;
@@ -50,8 +52,8 @@
     }
 
     .dx-tabpanel-container {
-      border-right: 1px solid #dee0e3;
-      border-left: 1px solid #dee0e3;
+      border-right: 1px solid var(--color-sombra);
+      border-left: 1px solid var(--color-sombra);
       background: #fff;
       padding: 12px;
 

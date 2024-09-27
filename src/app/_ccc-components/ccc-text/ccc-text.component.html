@@ -1,13 +1,14 @@
 <div class="ccc-text-container">
-    <h2>{{ titulo }}</h2>
-    <dx-text-box
-      [(value)]="valorInicial"
-      [showClearButton]="botonBorrar"
-      (onValueChanged)="handleValueChanged($event)"
-      [disabled]="disabled"
-
-    >
-    </dx-text-box>
-  
-        
+  <h2>{{ titulo }}</h2>
+  <div class="text-box-wrapper">
+    <!-- Div conteniendo el text box y el icono de error -->
+    <div class="input-error-container">
+      <dx-text-box
+        [(value)]="value"
+        [showClearButton]="botonBorrar"
+        (onValueChanged)="handleValueChanged($event)"
+        [disabled]="disabled"
+      ></dx-text-box>
+    </div>
   </div>
+</div>

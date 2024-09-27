@@ -25,10 +25,10 @@ $xxl-max: "(max-width:none)";
 $zpad-height: "(max-height:600px)";
 $tablet-pc: "(min-width: 992px) and (max-width: 1300px)";
 
-$font-family-1: "Noto Sans";
+$font-family-1: "NotoSans";
 
 
 
 :root {
-  --color-principal: #2C6A8F; // or any global you wish to share with components
+  --color-principal: var(--color-principal); // or any global you wish to share with components
 }

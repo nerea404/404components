@@ -1,16 +1,17 @@
 <h1 class="titulo-sec">Select</h1>
-<div class="content-sec">
+<div class="content-sec form-select">
   <app-ccc-select-box
-    [titulo]="'Select con btn borrar'"
+    [titulo]="'Select empty'"
     [valorInicial]="formData.productoSeleccionado"
     [items]="productos1"
-    [botonBorrar]="true"
+    [botonBorrar]="false"
     [ariaLabel]="'Producto'"
     (valueChanged)="onSelectValueChanged1($event)"
   ></app-ccc-select-box>
-  <!-- Texto habilitado sin botón borrar -->
+
   <app-ccc-select-box
-    [titulo]="'Select sin btn borrar'"
+    [titulo]="'Select focused'"
+    id="focused"
     [valorInicial]="formData.productoSeleccionado"
     [items]="productos2"
     [botonBorrar]="false"
@@ -18,7 +19,31 @@
     (valueChanged)="onSelectValueChanged2($event)"
   ></app-ccc-select-box>
 
-  <!-- Texto deshabilitado-->
+  <div class="error">
+    <app-ccc-select-box
+    id="error"
+    [titulo]="'Select error'"
+    [valorInicial]="formData.productoSeleccionado"
+    [items]="productos1"
+    [botonBorrar]="false"
+    [ariaLabel]="'Producto'"
+    (valueChanged)="onSelectValueChanged1($event)"
+  ></app-ccc-select-box>
+    <p class="error-msg">Tiene que seleccionar un campo</p>
+  </div>
+
+  <div class="aceptado">
+    <app-ccc-select-box
+    id="aceptado"
+    [titulo]="'Select aceptado'"
+    [valorInicial]="formData.productoSeleccionado"
+    [items]="productos1"
+    [botonBorrar]="false"
+    [ariaLabel]="'Producto'"
+    (valueChanged)="onSelectValueChanged1($event)"
+  ></app-ccc-select-box>
+  </div>
+
   <app-ccc-select-box
     [titulo]="'Select disabled'"
     [valorInicial]="formData.productoSeleccionado"

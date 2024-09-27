@@ -1,33 +1,67 @@
 <h1 class="titulo-sec">TagBox</h1>
-<div class="content-sec">
-  <!-- TagBox con botón borrar -->
+<div class="content-sec form-tag">
   <app-ccc-tag-box
-    [titulo]="'TagBox con btn borrar'"
-    [valorInicial]="formData.productosSeleccionados"
+    [titulo]="'TagBox empty'"
+    [valorInicial]="[]"
     [items]="productos1"
-    [botonBorrar]="true"
+    [botonBorrar]="false"
     [ariaLabel]="'Producto'"
-    (valueChanged)="onTagBoxValueChanged1($event)"
+    (valueChanged)="onTagBoxValueChangedEmpty($event)"
   ></app-ccc-tag-box>
 
-  <!-- TagBox sin botón borrar -->
   <app-ccc-tag-box
-    [titulo]="'TagBox sin btn borrar'"
-    [valorInicial]="formData.productosSeleccionados"
+    [titulo]="'TagBox filled'"
+    [valorInicial]="productosSeleccionadosFilled"
+    [items]="productos3"
+    [botonBorrar]="false"
+    [ariaLabel]="'Producto'"
+    (valueChanged)="onTagBoxValueChangedFilled($event)"
+  ></app-ccc-tag-box>
+
+  <app-ccc-tag-box
+    id="focused"
+    [titulo]="'TagBox focused'"
+    [valorInicial]="productosSeleccionadosFocused"
     [items]="productos2"
     [botonBorrar]="false"
     [ariaLabel]="'Producto'"
-    (valueChanged)="onTagBoxValueChanged2($event)"
+    (valueChanged)="onTagBoxValueChangedFocused($event)"
   ></app-ccc-tag-box>
 
-  <!-- TagBox deshabilitado -->
+  <div class="error">
+    <app-ccc-tag-box
+    id="error"
+    [titulo]="'TagBox filled'"
+    [valorInicial]="productosSeleccionadosFilled"
+    [items]="productos3"
+    [botonBorrar]="false"
+    [ariaLabel]="'Producto'"
+    (valueChanged)="onTagBoxValueChangedFilled($event)"
+  ></app-ccc-tag-box>
+
+    <p class="error-msg">Hay un error en el NIF.</p>
+  </div>
+
+  <div class="aceptado">
+    <app-ccc-tag-box
+    id="aceptado"
+    [titulo]="'TagBox filled'"
+    [valorInicial]="productosSeleccionadosFilled"
+    [items]="productos3"
+    [botonBorrar]="false"
+    [ariaLabel]="'Producto'"
+    (valueChanged)="onTagBoxValueChangedFilled($event)"
+  ></app-ccc-tag-box>
+
+  </div>
+
   <app-ccc-tag-box
     [titulo]="'TagBox disabled'"
-    [valorInicial]="formData.productosSeleccionados"
+    [valorInicial]="[]"
     [items]="productos3"
     [botonBorrar]="true"
     [ariaLabel]="'Producto'"
     [disabled]="true"
-    (valueChanged)="onTagBoxValueChanged3($event)"
+    (valueChanged)="onTagBoxValueChangedDisabled($event)"
   ></app-ccc-tag-box>
 </div>

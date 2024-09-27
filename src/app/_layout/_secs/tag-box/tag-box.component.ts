@@ -3,42 +3,49 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-tag-box',
   templateUrl: './tag-box.component.html',
-  styleUrl: './tag-box.component.scss'
+  styleUrls: ['./tag-box.component.scss']
 })
 export class TagBoxComponent {
-  formData = {
-    productosSeleccionados: ["hola"] // Valor inicial para el TagBox
-  };
+  // Especifica el tipo de los valores seleccionados
+  productosSeleccionadosFilled: number[] = [8]; // Valor inicial para el TagBox filled
+  productosSeleccionadosFocused: number[] = []; // Valor inicial para el TagBox focused
+  productosSeleccionadosEmpty: number[] = []; // Valor inicial para el TagBox focused
+
 
   productos1 = [
-    { id: 1, text: 'Producto1 1' },
-    { id: 2, text: 'Producto1 2' },
-    { id: 3, text: 'Producto1 3' }
+    { id: 1, text: 'Pro' },
+    { id: 2, text: 'Duct' },
+    { id: 3, text: 'Ucto' }
   ];
 
   productos2 = [
-    { id: 4, text: 'Producto2 1' },
-    { id: 5, text: 'Producto2 2' },
-    { id: 6, text: 'Producto2 3' }
+    { id: 4, text: 'Term' },
+    { id: 5, text: 'Var' },
+    { id: 6, text: 'Per' }
   ];
 
   productos3 = [
-    { id: 7, text: 'Producto3 1' },
-    { id: 8, text: 'Producto3 2' },
-    { id: 9, text: 'Producto3 3' }
+    { id: 7, text: 'Pepe' },
+    { id: 8, text: 'Ana' },
+    { id: 9, text: 'Lara' }
   ];
 
-  onTagBoxValueChanged1(selectedValues: any[]): void {
-    console.log('Productos seleccionados 1:', selectedValues);
-    this.formData.productosSeleccionados = selectedValues;
+  // Declara el tipo para el parámetro de la función
+  onTagBoxValueChangedEmpty(selectedValues: number[]): void {
+    console.log('Productos seleccionados Empty:', selectedValues);
+    this.productosSeleccionadosEmpty = selectedValues;
+  }
+  onTagBoxValueChangedFilled(selectedValues: number[]): void {
+    console.log('Productos seleccionados filled:', selectedValues);
+    this.productosSeleccionadosFilled = selectedValues;
   }
 
-  onTagBoxValueChanged2(selectedValues: any[]): void {
-    console.log('Productos seleccionados 2:', selectedValues);
-    this.formData.productosSeleccionados = selectedValues;
+  onTagBoxValueChangedFocused(selectedValues: number[]): void {
+    console.log('Productos seleccionados focused:', selectedValues);
+    this.productosSeleccionadosFocused = selectedValues;
   }
 
-  onTagBoxValueChanged3(selectedValues: any[]): void {
-    console.log('Productos seleccionados 3:', selectedValues);
-    this.formData.productosSeleccionados = selectedValues;
-  }}
+  onTagBoxValueChangedDisabled(selectedValues: number[]): void {
+    console.log('Productos seleccionados disabled:', selectedValues);
+  }
+}

@@ -1,22 +1,53 @@
 <h1 class="titulo-sec">Form Number</h1>
 
-<div class="content-sec">
+<div class="content-sec form-number">
   <app-ccc-number
-    [titulo]="'Número'"
-    [valorInicial]="formData.numero"
-    [botonBorrar]="true"
-    (valueChanged)="onNumberValueChanged($event)"
-  ></app-ccc-number>
-
-  <app-ccc-number
-    [titulo]="'Número sin botón borrar'"
+    [titulo]="'Número empty'"
     [botonBorrar]="false"
     (valueChanged)="onNumberValueChanged($event)"
   ></app-ccc-number>
 
   <app-ccc-number
+    [titulo]="'Número filled'"
+    [valorInicial]="formData.numero"
+    [botonBorrar]="false"
+    (valueChanged)="onNumberValueChanged($event)"
+  ></app-ccc-number>
+
+  <app-ccc-number
+    id="focused"
+    [titulo]="'Número focused'"
+    [valorInicial]="formData.numero"
+    [botonBorrar]="false"
+    (valueChanged)="onNumberValueChanged($event)"
+  ></app-ccc-number>
+
+  <div class="error">
+    <app-ccc-number
+      id="error"
+      [titulo]="'Número error'"
+      [valorInicial]="formData.numero"
+      [botonBorrar]="false"
+      (valueChanged)="onNumberValueChanged($event)"
+    ></app-ccc-number>
+    <p class="error-msg">Hay un error en el NIF.</p>
+  </div>
+
+  <div class="aceptado">
+    <app-ccc-number
+      id="aceptado"
+      [titulo]="'Número aceptado'"
+      [valorInicial]="formData.numero"
+      [botonBorrar]="false"
+      (valueChanged)="onNumberValueChanged($event)"
+    ></app-ccc-number>
+  </div>
+
+  <app-ccc-number
     [titulo]="'Número disabled'"
+    [valorInicial]="formData.numero"
     [botonBorrar]="false"
     [disabled]="true"
     (valueChanged)="onNumberValueChanged($event)"
   ></app-ccc-number>
+</div>

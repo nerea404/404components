@@ -7,13 +7,15 @@ import { Component } from '@angular/core';
 })
 export class FormTextComponent {
   formData = {
-    nombre: '', // Valor inicial para el componente de texto
+    nombre: 'Hola', // Valor inicial para el componente de texto
   };
   
   onTextValueChanged(value: string): void {
     console.log('Texto cambiado:', value);
     this.formData.nombre = value;
   }
+
+  
 
   
 }

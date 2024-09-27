@@ -25,7 +25,8 @@ $border-input-color: #d4d6d9;
   border-radius: 8px;
   padding: 8px 14px;
 
-  font-family: $font-family-1;
+  font-family: var(--tipografia);
+;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -60,7 +61,8 @@ input::placeholder {
   padding: 10px 13px;
 
   label {
-    font-family: $font-family-1;
+    font-family: var(--tipografia);
+;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -72,7 +74,8 @@ input::placeholder {
   }
 
   p, input, textarea {
-    font-family: $font-family-1;
+    font-family: var(--tipografia);
+;
     color: $color-2;
     font-size: 16px;
     font-style: normal;
@@ -176,7 +179,8 @@ select {
 .form-group label {
   font-size: 12px;
   font-weight: 500;
-  font-family: $font-family-1;
+  font-family: var(--tipografia);
+;
   letter-spacing: 0.2413pt;
   line-height: 20px;
   color: #989898;
@@ -195,7 +199,8 @@ select {
   .e-input-group.e-control-wrapper, .e-input-group.e-disabled,
   .e-input-group.e-control-wrapper.e-disabled,
   .e-input-group .e-input[disabled], .e-input-group.e-control-wrapper .e-input[disabled], .e-input-group.e-disabled input.e-input, .e-input-group.e-control-wrapper.e-disabled input.e-input {
-    font-family: $font-family-1;
+    font-family: var(--tipografia);
+;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -258,7 +263,8 @@ select {
   label.ui-radiobutton-label {
     font-size: 14px;
     font-weight: 400;
-    font-family: $font-family-1;
+    font-family: var(--tipografia);
+;
     letter-spacing: 0.6pt;
     line-height: 24px;
     color: #5A5A5A;
@@ -270,19 +276,19 @@ select {
   .ui-radiobutton .ui-radiobutton-box.ui-state-active {
     border-color: $color-3;
     background-color: #fff;
-    color: #ffffff;
+    color: var(--color-blanco);
   }
 
   .ui-radiobutton .ui-radiobutton-box.ui-state-active:not(.ui-state-disabled):hover {
       border-color: $color-3;
       background-color: #fff;
-      color: #ffffff;
+      color: var(--color-blanco);
   }
 
   .ui-radiobutton .ui-radiobutton-box.ui-state-active.ui-state-focus {
       border-color: $color-3;
       background-color: #fff;
-      color: #ffffff;
+      color: var(--color-blanco);
       box-shadow: none;
   }
 
@@ -314,13 +320,13 @@ select {
    .ui-chkbox .ui-chkbox-box.ui-state-active {
     border-color: $color-3;
     background-color: $color-3;
-    color: #ffffff;
+    color: var(--color-blanco);
   }
 
    .ui-chkbox .ui-chkbox-box.ui-state-active:not(.ui-state-disabled):hover {
     border-color: $color-3;
     background-color: $color-3;
-    color: #ffffff;
+    color: var(--color-blanco);
   }
 
    .ui-inputtext:enabled:focus:not(.ui-state-error) {
@@ -332,14 +338,14 @@ select {
    .ui-chkbox .ui-chkbox-box.ui-state-focus {
     border-color: $color-3;
     background-color: $color-3;
-    color: #ffffff;
+    color: var(--color-blanco);
     box-shadow: none;
   }
 
    .ui-chkbox .ui-chkbox-box.ui-state-active.ui-state-focus {
     border-color: $color-3;
     background-color: $color-3;
-    color: #ffffff;
+    color: var(--color-blanco);
     box-shadow: none;
   }
 
@@ -397,13 +403,13 @@ body  .ui-chkbox .ui-chkbox-box {
 body .ui-chkbox .ui-chkbox-box.ui-state-active {
   border-color: $color-3;
   background-color: $color-3;
-  color: #ffffff;
+  color: var(--color-blanco);
 }
 
 body .ui-chkbox .ui-chkbox-box.ui-state-active:not(.ui-state-disabled):hover {
   border-color: $color-3;
   background-color: $color-3;
-  color: #ffffff;
+  color: var(--color-blanco);
 }
 
 body .ui-inputtext:enabled:focus:not(.ui-state-error) {
@@ -415,14 +421,14 @@ body .ui-inputtext:enabled:focus:not(.ui-state-error) {
 body .ui-chkbox .ui-chkbox-box.ui-state-focus {
   border-color: $color-3;
   background-color: $color-3;
-  color: #ffffff;
+  color: var(--color-blanco);
   box-shadow: none;
 }
 
 body .ui-chkbox .ui-chkbox-box.ui-state-active.ui-state-focus {
   border-color: $color-3;
   background-color: $color-3;
-  color: #ffffff;
+  color: var(--color-blanco);
   box-shadow: none;
 }
 
@@ -471,7 +477,8 @@ body .ui-chkbox + .ui-chkbox-label {
   margin-right: 20px;
   color: white;
   border-radius: 10px;
-  font-family: $font-family-1;
+  font-family: var(--tipografia);
+;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.5pt;
@@ -652,7 +659,8 @@ body .ui-inputswitch.ui-inputswitch-checked.ui-inputswitch-checked:not(.ui-state
   margin-right: 20px;
   color: white;
   border-radius: 0px;
-  font-family: $font-family-1;
+  font-family: var(--tipografia);
+;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.2143pt;
@@ -678,7 +686,8 @@ body .ui-inputswitch.ui-inputswitch-checked.ui-inputswitch-checked:not(.ui-state
   border: 2px solid $color-1;
   color: $color-1;
   border-radius: 0px;
-  font-family: $font-family-1;
+  font-family: var(--tipografia);
+;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.2143pt;
@@ -720,7 +729,8 @@ table.input-grid {
 
     & > tr > th {
       padding: 10px 0;
-      font-family: $font-family-1;
+      font-family: var(--tipografia);
+;
       font-size: 14px;
       letter-spacing: 0.2143pt;
       line-height: 20px;
@@ -783,7 +793,8 @@ table.input-grid {
 
 .link-btn {
   color: $color-1;
-  font-family: $font-family-1;
+  font-family: var(--tipografia);
+;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.2143pt;

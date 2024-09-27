@@ -41,7 +41,8 @@
         }
 
         span {
-          font-family: $font-family-1;
+          font-family: var(--tipografia);
+;
           flex: 0 1 auto;
           font-size: 13px;
           font-style: normal;
@@ -66,7 +67,8 @@
         }
 
         p {
-          font-family: $font-family-1;
+          font-family: var(--tipografia);
+;
           font-size: 13px;
           font-style: normal;
           font-weight: 400;

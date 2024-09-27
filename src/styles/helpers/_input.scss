@@ -6,39 +6,94 @@
       @include label-input;
     }
 
-    dx-text-box {
-      border-radius: 4px;
-      border: 1px solid #8891aa;
-      background: #fff;
+    .text-box-wrapper {
+      dx-text-box {
+        width: 99%;
+        border: none !important;
+        .dx-texteditor-container {
+          border-radius: 4px;
+          border: 1px solid #8891aa !important;
+          background: #fff;
+          input {
+            padding: 6px 8px;
+            min-height: auto;
 
-      input {
-        padding: 6px 8px;
-        min-height: auto;
-
-        color: var(--color-texto);
-        font-family: $font-family-1;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 0.1px;
-        text-transform: uppercase;
+            color: var(--color-texto);
+            font-family: var(--tipografia);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.1px;
+            text-transform: uppercase;
+          }
+        }
       }
-    }
 
-    .dx-state-disabled {
-      border-radius: 4px;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      background: #dedede;
-      input {
-        color:#8f8f8f;
-        font-family:var(--tipografia);
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        letter-spacing: 0.1px;
-        text-transform: uppercase;
+      .dx-state-disabled {
+        .dx-texteditor-container {
+          border-radius: 4px;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          background: var(--color-bordes);
+          input {
+            color: var(--color-disabled);
+            font-family: var(--tipografia);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.1px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .dx-state-focused {
+        .dx-texteditor-container {
+          border-radius: 4px;
+          border: 0px solid #fff !important;
+          background: #fff;
+          box-shadow: 0px 0px 1px 2px var(--color-bordes-input);
+          input {
+            padding: 6px 8px;
+            min-height: auto;
+
+            color: var(--color-texto);
+            font-family: var(--tipografia);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.1px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .input-error-container {
+        display: flex;
+        align-items: center;
+        .error-icon {
+          color: #be2e2e;
+          font-family: var(--tipografia);
+          font-size: 9px;
+          border: solid 1px #be2e2e;
+          border-radius: 50%;
+          padding: 0px 5px;
+          font-weight: 600;
+        }
+      }
+
+      .error-message-container {
+        .error-message {
+          color: #be2e2e;
+          font-family: var(--tipografia);
+          font-size: 11px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 14px; /* 127.273% */
+          letter-spacing: 0.1px;
+        }
       }
     }
   }
@@ -60,7 +115,7 @@
       min-height: auto;
 
       color: var(--color-texto);
-      font-family: $font-family-1;
+      font-family: var(--tipografia);
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -72,13 +127,33 @@
   .dx-state-disabled {
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    background: #dedede;
+    background: var(--color-bordes);
     input {
-      color:#8f8f8f;
-      font-family:var(--tipografia);
+      color: var(--color-disabled);
+      font-family: var(--tipografia);
       font-size: 12px;
       font-style: normal;
       font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+    }
+  }
+
+  .dx-state-focused {
+    border-radius: 4px;
+    border: 1px solid #fff !important;
+    background: #fff;
+    box-shadow: 0px 0px 1px 2px var(--color-bordes-input);
+    input {
+      padding: 6px 8px;
+      min-height: auto;
+
+      color: var(--color-texto);
+      font-family: var(--tipografia);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
       line-height: normal;
       letter-spacing: 0.1px;
       text-transform: uppercase;
@@ -90,7 +165,7 @@
 @mixin ccc-boton {
   .boton-accion {
     border-radius: 5.313px;
-    border: 1.063px solid #e7e7e7;
+    border: 1.063px solid var(--color-fondo-e7);
     background: #fff;
     padding: 3.755px 4.25px 4.745px 4.25px;
     cursor: pointer;
@@ -137,11 +212,15 @@
             border-radius: 4.582px;
             border: 1.432px solid var(--color-principal);
             background: #ecedef;
+
+            &::before {
+              color: var(--color-principal);
+            }
           }
 
           .dx-checkbox-text {
             color: var(--color-texto);
-            font-family: $font-family-1;
+            font-family: var(--tipografia);
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -165,10 +244,20 @@
       display: flex;
       gap: 24px;
       .dx-item {
+        .dx-item-content {
+          color: var(--color-texto);
+          font-family: var(--tipografia);
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.1px;
+        }
         .dx-radio-value-container {
+          padding-right: 6px;
           .dx-radiobutton-icon {
             border-radius: 4.582px;
-            border: 1.432px solid #2c6a8f;
+            border: 1.432px solid var(--color-principal);
             background: #ecedef;
             width: 18px;
             height: 18px;
@@ -182,7 +271,7 @@
             .dx-radiobutton-icon-dot {
               border-radius: 4.582px;
               border-width: 2px;
-              background-color: #2c6a8f;
+              background-color: var(--color-principal);
             }
           }
         }
@@ -198,46 +287,96 @@
   }
 
   dx-select-box {
-    border-radius: 4px;
-    border: 1px solid #8891aa;
-    background: #fff;
+    border: none !important;
 
-    input {
-      padding: 6px 8px;
-      min-height: auto;
+    .dx-dropdowneditor-input-wrapper {
+      border-radius: 4px;
+      border: 1px solid #8891aa;
+      background: #fff;
 
-      color: var(--color-texto);
-      font-family: $font-family-1;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: 0.1px;
-      text-transform: uppercase;
-    }
-    .dx-placeholder {
-      color: var(--color-texto);
-      font-family: $font-family-1;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: 0.1px;
+      .dx-texteditor-input-container {
+        input {
+          padding: 6px 8px;
+          min-height: auto;
+
+          color: var(--color-texto);
+          font-family: var(--tipografia);
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.1px;
+          text-transform: uppercase;
+        }
+      }
+
+      .dx-texteditor-buttons-container {
+        border-radius: 0px 4px 4px 0px;
+        border-left: 1px solid #e1e3ea;
+        background: #f4f4f6;
+
+        .dx-widget {
+          padding: 0px;
+        }
+      }
+
+      .dx-placeholder {
+        color: var(--color-texto);
+        font-family: var(--tipografia);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.1px;
+      }
     }
   }
+
   .dx-state-disabled {
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background: #dedede;
-    input {
-      color:#8f8f8f;
-      font-family:var(--tipografia);
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-      letter-spacing: 0.1px;
-      text-transform: uppercase;
+    .dx-dropdowneditor-input-wrapper {
+      border-radius: 4px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      background: var(--color-bordes);
+      .dx-texteditor-input-container {
+        input {
+          padding: 6px 8px;
+          min-height: auto;
+
+          color: var(--color-disabled);
+          font-family: var(--tipografia);
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.1px;
+          text-transform: uppercase;
+        }
+      }
+
+      .dx-texteditor-buttons-container {
+        border-left: 0px solid #e1e3ea;
+        background: var(--color-bordes);
+      }
+    }
+  }
+
+  .dx-state-hover,
+  .dx-state-active {
+    .dx-dropdowneditor-input-wrapper {
+      .dx-texteditor-buttons-container {
+        .dx-widget {
+          .dx-dropdowneditor-icon {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .dx-dropdowneditor-active {
+    .dx-dropdowneditor-input-wrapper {
+      box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.9),
+        0px 0px 0px 2px var(--color-bordes-input);
     }
   }
   @content;
@@ -249,46 +388,78 @@
   }
 
   dx-tag-box {
-    border-radius: 4px;
-    border: 1px solid #8891aa;
-    background: #fff;
+    border: none !important;
+    .dx-dropdowneditor-input-wrapper {
+      border-radius: 4px;
+      border: 1px solid #8891aa;
+      background: #fff;
 
-    input {
-      padding: 6px 8px;
-      min-height: auto;
+      .dx-texteditor-input-container {
+        padding: 0px;
+        .dx-placeholder {
+          color: var(--color-texto);
+          font-family: var(--tipografia);
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.1px;
 
-      color: var(--color-texto);
-      font-family: $font-family-1;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: 0.1px;
-      text-transform: uppercase;
+          &::before {
+            padding: 6px 8px;
+          }
+        }
+
+        .dx-tag {
+          .dx-tag-content {
+            margin: 4px 8px;
+            padding: 2px 4px;
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            .span {
+              color: var(--color-texto);
+              font-family: var(--tipografia);
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              letter-spacing: 0.1px;
+            }
+
+            .dx-tag-remove-button {
+              position: static;
+              width: 10px;
+            }
+          }
+        }
+      }
     }
-    .dx-placeholder {
-      color: var(--color-texto);
-      font-family: $font-family-1;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: 0.1px;
+  }
+
+  .dx-dropdowneditor-active {
+    .dx-dropdowneditor-input-wrapper {
+      border: 1px solid var(--color-ico-submenu);
+      background: #fff;
+      box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.9),
+        0px 0px 0px 2px var(--color-bordes-input);
     }
   }
   .dx-state-disabled {
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background: #dedede;
-    input {
-      color:#8f8f8f;
-      font-family:var(--tipografia);
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-      letter-spacing: 0.1px;
-      text-transform: uppercase;
+    .dx-dropdowneditor-input-wrapper {
+      border-radius: 4px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      background: var(--color-bordes);
+      input {
+        color: var(--color-disabled);
+        font-family: var(--tipografia);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.1px;
+        text-transform: uppercase;
+      }
     }
   }
   @content;

@@ -1,26 +1,57 @@
 <h1 class="titulo-sec">Form Text</h1>
 
-<div class="content-sec">
+<div class="content-sec form-text">
   <app-ccc-text
-    [titulo]="'Texto'"
-    [valorInicial]="formData.nombre"
-    [botonBorrar]="true"
-    valorInicial="input"
+    [titulo]="'Texto empty'"
+    [botonBorrar]="false"
+    [required]="false"
     (valueChanged)="onTextValueChanged($event)"
   ></app-ccc-text>
 
   <app-ccc-text
-    [titulo]="'Texto sin botón borrar'"
+    [valorInicial]="formData.nombre"
+    [titulo]="'Texto filled'"
     [botonBorrar]="false"
-    valorInicial="input"
+    [required]="false"
     (valueChanged)="onTextValueChanged($event)"
   ></app-ccc-text>
+
+  <app-ccc-text
+    id="focused"
+    [titulo]="'Texto focused'"
+    [botonBorrar]="false"
+    [required]="false"
+    (valueChanged)="onTextValueChanged($event)"
+  ></app-ccc-text>
+
+  <div class="error">
+    <app-ccc-text
+      id="error"
+      [titulo]="'Texto error'"
+      [botonBorrar]="false"
+      [required]="true"
+      (valueChanged)="onTextValueChanged($event)"
+      [valorInicial]="' '"
+    ></app-ccc-text>
+    <p class="error-msg">Hay un error en el NIF.</p>
+  </div>
+
+  <div class="aceptado">
+    <app-ccc-text
+      id="aceptado"
+      [titulo]="'Texto aceptado'"
+      [botonBorrar]="false"
+      [required]="true"
+      (valueChanged)="onTextValueChanged($event)"
+      [valorInicial]="' '"
+    ></app-ccc-text>
+  </div>
 
   <app-ccc-text
     [titulo]="'Texto disabled'"
     [botonBorrar]="false"
     [disabled]="true"
-    valorInicial="input"
+    [required]="true"
     (valueChanged)="onTextValueChanged($event)"
   ></app-ccc-text>
 </div>

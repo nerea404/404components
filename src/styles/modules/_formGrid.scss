@@ -99,7 +99,8 @@
     background-size: 100px 2px;
     background-repeat: repeat-x;*/
 
-    font-family: $font-family-1;
+    font-family: var(--tipografia);
+;
     font-size: 16px;
     font-weight: 500;
     color: #5A5A5A;

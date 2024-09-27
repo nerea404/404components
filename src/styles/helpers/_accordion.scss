@@ -3,15 +3,16 @@
 @mixin ccc-accordion {
   dx-accordion {
     border-radius: 4px;
-    background: #f9f9f9;
+    background: var(--color-fondo);
 
     .dx-item {
       border: none;
 
       .dx-item-content {
         .dx-accordion-item-title-caption {
-          color:#408cbe;
-          font-family: $font-family-1;
+          color:var(--color-principal-claro);
+          font-family: var(--tipografia);
+;
           font-size: 12px;
           font-style: normal;
           font-weight: 600;

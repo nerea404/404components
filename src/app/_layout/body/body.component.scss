@@ -7,21 +7,20 @@
     justify-content: center;
     .sec {
       width: 48%;
-      border: 1px dashed #2C6A8F;
+      border: 1px dashed var(--color-principal);
       padding: 10px;
       border-radius: 10px;
       .titulo-sec {
         font-size: 25px;
-        font-family: "Noto Sans";
+        font-family: var(--tipografia);
         margin: 0px;
       }
 
-      .content-sec{
+      .content-sec {
         display: flex;
-        justify-content: space-between;
-
-        app-ccc-tag-box{
-          width: 25%;
+        gap: 40px;
+        app-ccc-tag-box {
+          width: 100%;
         }
       }
     }
