@@ -34,7 +34,7 @@
     padding: .4rem 0.857rem;
     border: none;
     font-weight: 700;
-    color: white;
+    color: var(--color-blanco);
     background-color: #2E4265;
     font-size: 16px;
     text-align: center;
@@ -68,15 +68,15 @@
 
   .ui-table .ui-sortable-column:not(.ui-state-highlight):hover {
     background-color: $color-2;
-    color: white;
+    color: var(--color-blanco);
   }
 
   .ui-table .ui-table-tbody > tr {
-    background-color: white;
+    background-color: var(--color-blanco);
   }
 
   .ui-table .ui-table-tbody > tr:nth-child(even) {
-    background-color: white;
+    background-color: var(--color-blanco);
   }
 
   .ui-table-scrollable-view {
@@ -119,7 +119,7 @@
   }
 
   .ui-paginator {
-    background-color: #fff;
+    background-color: var(--color-blanco);
     border:none;
     border-top: 1px solid #c8c8c8;
     padding: 0;
@@ -127,7 +127,7 @@
 
   .ui-table .ui-table-summary {
     background-color: #2E4265;
-    color: white;
+    color: var(--color-blanco);
     border: none;
     padding: 5px 0px;
     text-align: center;
@@ -147,12 +147,12 @@
   .ui-table .ui-table-tbody > tr.ui-state-highlight, .ui-table .ui-table-tbody > tr:nth-child(2n).ui-state-highlight {
     //background-color: rgba(46, 66, 101, 0.25);
     background-color: #E2FBF8;
-    color: #fff;
+    color: var(--color-blanco);
 
     .dropdown-fila {
       .dropdown-toggle {
         i {
-          color: white;
+          color: var(--color-blanco);
         }
       }
     }
@@ -182,7 +182,7 @@
       width: 26px;
       height: 26px;
       font-size: 26px;
-      color: white;
+      color: var(--color-blanco);
 
       &.icon-imprimir {
         font-size: 20px;
@@ -221,7 +221,7 @@
       .dropdown-link {
         svg {
           width: 24px;
-          fill: white;
+          fill: var(--color-blanco);
         }
       }
     }
@@ -274,7 +274,7 @@
 
       svg {
         width: 16px;
-        fill: #fff;
+        fill: var(--color-blanco);
       }
     }
   }
@@ -339,7 +339,7 @@
     background: $color-2;
 
     .dropdown-item {
-      color: white;
+      color: var(--color-blanco);
       font-size: 18px;
       font-weight: 600;
       letter-spacing: 0.5pt;

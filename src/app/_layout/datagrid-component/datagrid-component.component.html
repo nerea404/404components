@@ -1,0 +1,23 @@
+<app-ccc-datagrid
+  [dataSource]="clientes"
+  keyExpr="ID"
+  
+  [columns]="[
+    { dataField: 'ID', caption: 'ID', width: '70' },
+    { dataField: 'codigo', caption: 'Codigo' },
+    { dataField: 'nombreComercial', caption: 'Nombre Comercial' },
+    { dataField: 'nombreFiscal', caption: 'Nombre Fiscal' },
+    { dataField: 'nif', caption: 'NIF' },
+    { dataField: 'direccion1', caption: 'Direccion 1' },
+    { dataField: 'direccion2', caption: 'Direccion 2' },
+    { dataField: 'localidad', caption: 'Localidad' },
+    { dataField: 'cp', caption: 'CP' },
+    { dataField: 'provincia', caption: 'Provincia' },
+    { dataField: 'telefono', caption: 'Teléfono' },
+    { dataField: 'movil', caption: 'Móvil' },
+    { dataField: 'actividad', caption: 'Actividad' }
+  ]"
+  
+  (focusedRowChanged)="onFocusedRowChanged($event)"
+  (saved)="onSaved($event)"
+></app-ccc-datagrid>

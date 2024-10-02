@@ -1,4 +1,4 @@
-@import "../src/styles/base/fonts";
+@import "../src/styles/base/base-dir";
 :root {
   --color-principal: #2c6a8f;
   --color-principal-claro: #408cbe;
@@ -18,5 +18,9 @@
 
   --tipografia: "NotoSans";
 
+
   // var(--color-text-input)
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

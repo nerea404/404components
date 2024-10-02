@@ -1,82 +1,517 @@
 @mixin ccc-datagrid {
-  .button-container {
-    padding: 6px 8px;
+  app-ccc-datagrid {
+    .datagrid {
+      .botones-filtros {
+        position: absolute;
+        right: 27px;
+        top: 6px;
+        button {
+          border-radius: 5.311px;
+          border: 0.609px solid var(--color-fondo-e7);
+          background: var(--color-blanco);
+          box-shadow: 0px -0.19px 3.807px 0px rgba(0, 0, 0, 0.05);
+          padding: 0px;
+          margin: 0px;
+          min-width: 34px;
+          max-height: 34px;
 
-    border: 1px solid #ced1d6;
-    display: flex;
-    gap: 6px;
-    button {
-      border-radius: 5.313px;
-      border: 1.063px solid var(--color-fondo-e7);
-      background: #fff;
-      padding: 3.755px 4.25px;
-      i{
-        font: 23px / 1 DXIcons;
-      }
-    }
-  }
+          &:hover {
+            background: var(--color-estado-active);
+          }
 
-  dx-data-grid {
-    .dx-datagrid-headers {
-      .dx-datagrid-scrollable-simulated {
-        tr {
-          td {
-            padding: 12px 16px 12px 16px;
-            border: none;
-            background: var(--color-fondo);
-            box-shadow: 0px -1px 0px 0px var(--color-sombra) inset;
-            border-right: 1px solid #cfcfcf;
-
-            &:last-child {
-              border-right: none;
-            }
-
-            .dx-datagrid-text-content {
-              color: var(--color-texto);
-              font-family: var(--tipografia);
-;
-              font-size: 12px;
-              font-style: normal;
-              font-weight: 600;
-              line-height: normal;
-              letter-spacing: 0.1px;
-              width: 100%;
-            }
-
-            .dx-header-filter {
+          &:active {
+            background: var(--color-principal);
+            .mdc-button__label {
               &::before {
-                content: "\e915";
-                font-family: "icomoon";
-                color: var(--color-texto);
+                color: var(--color-blanco);
+              }
+            }
+          }
+
+          .mdc-button__label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            // &::before {
+            //   content: url(/assets/img/btn-filtros.svg);
+            //   width: 19.26px;
+            //   height: 19.8px;
+            // }
+
+            &::before {
+              font-family: "icomoon";
+              content: "\e903";
+              font-size: 19px;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              opacity: 1;
+              color: var(--color-ico-submenu);
+            }
+          }
+        }
+        button[aria-expanded="true"] {
+          background: var(--color-principal);
+          .mdc-button__label {
+            &::before {
+              color: var(--color-blanco);
+            }
+          }
+        }
+      }
+
+      .data-grid-container {
+        dx-data-grid {
+          border-radius: 4px;
+          background: var(--color-blanco);
+          .dx-datagrid {
+            .dx-datagrid-header-panel {
+              padding: 6px 16px;
+              border: 1px solid #ced1d6;
+              border-bottom: 0px;
+              border-radius: 4px 4px 0px 0px;
+
+              .dx-toolbar {
+                margin: 0px;
+                .dx-toolbar-items-container {
+                  .dx-toolbar-before {
+                    .dx-datagrid-group-panel {
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      &::before {
+                        content: "Agrupar por:";
+                        color: var(--color-texto);
+                        text-align: center;
+                        font-family: var(--tipografia);
+                        font-size: 11px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 14px;
+                        letter-spacing: 0.1px;
+                        text-transform: uppercase;
+                      }
+                      .dx-group-panel-message {
+                        color: var(--color-texto);
+                        text-align: center;
+                        font-family: var(--tipografia);
+                        font-size: 11px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 14px;
+                        letter-spacing: 0.1px;
+                      }
+
+                      .dx-group-panel-item {
+                        border-radius: 4px;
+                        opacity: 0.8;
+                        background: var(--color-estado-active);
+                        padding: 4px;
+                        border: none;
+
+                        color: var(--color-texto);
+                        text-align: center;
+                        font-family: var(--tipografia);
+                        font-size: 11px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 14px;
+                        letter-spacing: 0.1px;
+                      }
+                    }
+                  }
+                  .dx-toolbar-after {
+                    margin-right: 60px;
+
+                    .dx-datagrid-search-panel {
+                      border-radius: 4px;
+                      border: 1px solid var(--color-bordes);
+                      background: var(--color-blanco);
+
+                      .dx-texteditor-input-container {
+                        display: flex;
+                        align-items: center;
+                        padding: 5px 12px;
+                        gap: 8px;
+
+                        .dx-icon {
+                          position: static;
+                          margin-top: 0px;
+                          padding: 0px;
+                          width: auto;
+                          height: 18px;
+                        }
+                        input {
+                          padding: 0px;
+                          min-height: 24px;
+
+                          color: var(--color-disabled);
+                          font-family: var(--tipografia);
+                          font-size: 13px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: normal;
+                          letter-spacing: 0.1px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .dx-datagrid-headers {
+              .dx-datagrid-scrollable-simulated {
+                tr {
+                  &:first-child {
+                    td {
+                      padding: 0px;
+                      border: none;
+                      background: var(--color-fondo);
+                      box-shadow: 0px -1px 0px 0px var(--color-sombra) inset;
+                      text-align: left !important;
+                      .dx-column-indicators {
+                        float: left !important;
+                        padding: 12px 0px;
+                        margin-right: -10px;
+                        margin-left: 13px;
+
+                        &:last-child {
+                          margin-right: -27px;
+                        }
+                      }
+
+                      &:last-child {
+                        .dx-datagrid-text-content {
+                          border-right: none;
+                        }
+                      }
+
+                      .dx-datagrid-text-content {
+                        color: var(--color-texto);
+                        font-family: var(--tipografia);
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        letter-spacing: 0.1px;
+                        width: 100%;
+                        padding: 0px 16px;
+                        margin: 12px 0px;
+                        border-right: 1px solid #cfcfcf;
+                      }
+
+                      .dx-widget {
+                        padding: 0px 26px;
+                        margin: 12px 0px;
+                        border-right: 1px solid #cfcfcf;
+
+                        .dx-checkbox-icon {
+                          border-radius: 4.582px;
+                          border: 1.432px solid var(--color-principal);
+                          background: #ecedef;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          padding: 2px;
+                          &:before {
+                            background-color: var(--color-principal);
+                            border-radius: 3px;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            margin-top: 0px;
+                            margin-inline-start: 0px;
+                            inset-inline-start: 0px;
+                          }
+                        }
+                      }
+
+                      .dx-checkbox-checked .dx-checkbox-icon::before {
+                        content: "";
+                      }
+
+                      .dx-header-filter {
+                        &::before {
+                          content: "\e907";
+                          font-family: "icomoon";
+                          color: var(--color-ico-submenu);
+                        }
+                      }
+                    }
+                  }
+
+                  // .dx-command-select{
+                  //   min-width: 28px;
+                  //   max-width: 28px;
+                  //   width: 28px;
+                  // }
+                }
+              }
+            }
+
+            .dx-datagrid-rowsview {
+              border-radius: 0px 0px 4px 4px;
+
+              .dx-row {
+                td {
+                  color: var(--color-texto);
+                  font-family: var(--tipografia);
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  letter-spacing: 0.1px;
+                  text-transform: uppercase;
+                  padding-left: 16px;
+                  text-align: left !important;
+                  &:last-child{
+                    text-align: center !important;
+                    padding-left: 0px;
+                  }
+                  .dx-checkbox-icon {
+                    border-radius: 4.582px;
+                    border: 1.432px solid var(--color-principal);
+                    background: #ecedef;
+                  }
+                  .dx-checkbox {
+                    display: inline-block;
+                  }
+                }
+
+                .dx-command-select {
+                  .dx-checkbox-icon {
+                    border-radius: 4.582px;
+                    border: 1.432px solid var(--color-principal);
+                    background: #ecedef;
+                  }
+                }
+              }
+              .dx-selection.dx-row:not(.dx-row-focused) > td {
+                background-color: var(--color-estado-active);
+              }
+            }
+
+            .dx-bordered-bottom-view {
+              background: var(--color-blanco);
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+
+              &::before {
+                content: "";
+                width: 1px;
+                height: 16px;
+                background: var(--color-bordes);
+                order: 2;
+              }
+              .dx-datagrid-filter-panel-left {
+                .dx-datagrid-filter-panel-text {
+                  color: var(--color-principal-claro);
+                  text-overflow: ellipsis;
+                  font-family: var(--tipografia);
+                  font-size: 13px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  letter-spacing: 0.1px;
+                }
+              }
+
+              .dx-datagrid-filter-panel-clear-filter {
+                color: var(--color-principal);
+                text-overflow: ellipsis;
+                font-family: var(--tipografia);
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 13.7px; /* 105.385% */
+                letter-spacing: 0.1px;
+                text-decoration: underline;
+                order: 3;
               }
             }
           }
         }
       }
     }
+  }
 
-    .dx-datagrid-rowsview {
-      border-radius: 0px 0px 4px 4px;
-      .dx-row {
-        td {
-          padding: 6px 16px 6px 16px;
+  .menu-desplegable {
+    min-width: 226px !important;
+    .mat-mdc-menu-content {
+      padding: 3px;
+      border-radius: 8px;
+      background: var(--color-fondo);
+      box-shadow: 2px 2px 10px 0px rgba(82, 82, 82, 0.25);
+      .mat-mdc-menu-item {
+        background-color: var(--color-blanco);
+        border: 1px solid var(--color-bordes);
+
+        min-height: 33px;
+        .mat-mdc-menu-item-text {
           color: var(--color-texto);
+          text-overflow: ellipsis;
           font-family: var(--tipografia);
-;
           font-size: 12px;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
           letter-spacing: 0.1px;
-          text-transform: uppercase;
+          border-radius: 6px;
+
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+
+      .desp-filtros {
+        border-radius: 8px 8px 0px 0px;
+        border-bottom: none;
+        .mat-mdc-menu-item-text {
+          // &::before {
+          //   content: url(/assets/img/filtros.svg);
+          //   width: 16.56px;
+          //   height: 16.56px;
+          // }
+
+          &::before {
+            font-family: "icomoon";
+            content: "\e905";
+            font-size: 16px;
+            opacity: 1;
+            color: var(--color-ico-submenu);
+          }
+        }
+      }
+
+      .colapsar-filas {
+        border-bottom: none;
+        .mat-mdc-menu-item-text {
+          // &::before {
+          //   content: url(/assets/img/colapsar.svg);
+          //   width: 16.56px;
+          //   height: 16.56px;
+          // }
+
+          &::before {
+            font-family: "icomoon";
+            content: "\e904";
+            font-size: 16px;
+            opacity: 1;
+            color: var(--color-ico-submenu);
+          }
+        }
+      }
+
+      .organizar-columnas {
+        border-bottom: none;
+        .mat-mdc-menu-item-text {
+          // &::before {
+          //   content: url(/assets/img/organizar.svg);
+          //   width: 16.56px;
+          //   height: 16.56px;
+          // }
+          &::before {
+            font-family: "icomoon";
+            content: "\e906";
+            font-size: 16px;
+            opacity: 1;
+            color: var(--color-ico-submenu);
+          }
+        }
+      }
+
+      .filtro-personalizado {
+        border-radius: 0px 0px 8px 8px;
+        .mat-mdc-menu-item-text {
+          // &::before {
+          //   content: url(/assets/img/personalizados.svg);
+          //   width: 16.56px;
+          //   height: 16.56px;
+          // }
+
+          &::before {
+            font-family: "icomoon";
+            content: "\e907";
+            font-size: 16px;
+            opacity: 1;
+            color: var(--color-ico-submenu);
+          }
         }
       }
     }
+  }
 
-    .dx-bordered-bottom-view {
-      background: #fff;
+  .submenu-desplegable {
+    min-width: 218px !important;
+
+    .mat-mdc-menu-content {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      background: var(--color-blanco);
+      padding: 0px;
+      overflow: hidden;
+
+      .mat-mdc-checkbox {
+        border: 0.5px solid var(--color-fondo-e7);
+
+        &:hover {
+          background-color: var(--color-fondo-e7);
+        }
+        .mdc-form-field {
+          display: flex;
+          gap: 8px;
+          padding: 10px 8px;
+
+          .mdc-checkbox {
+            padding: 0px;
+            width: 16px;
+            height: 16px;
+
+            .mdc-checkbox__ripple {
+              background: none;
+            }
+
+            .mdc-checkbox__background {
+              border-radius: 3.2px;
+              border: 1px solid var(--color-principal);
+              background: var(--color-fondo);
+              width: 16px;
+              height: 16px;
+              position: static;
+
+              .mdc-checkbox__checkmark {
+                color: var(--color-principal);
+                top: 2px;
+                left: 2px;
+                width: 70%;
+              }
+            }
+          }
+
+          .mdc-label {
+            overflow: hidden;
+            color: var(--color-texto);
+            text-overflow: ellipsis;
+            font-family: var(--tipografia);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.1px;
+          }
+        }
+      }
     }
   }
 
   @content;
 }
+       

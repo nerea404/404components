@@ -1,0 +1,29 @@
+::ng-deep {
+    .body {
+      padding: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      .sec {
+        width: 48%;
+        border: 1px dashed var(--color-principal);
+        padding: 10px;
+        border-radius: 10px;
+        .titulo-sec {
+          font-size: 25px;
+          font-family: var(--tipografia);
+          margin: 0px;
+        }
+  
+        .content-sec {
+          display: flex;
+          gap: 40px;
+          app-ccc-tag-box {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  

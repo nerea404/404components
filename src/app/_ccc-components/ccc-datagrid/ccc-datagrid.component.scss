@@ -1,9 +1,6 @@
 @import "../../../styles/helpers/helpers-dir";
-@import '../../../styles/variables';
+@import "../../../styles/variables";
 
 ::ng-deep {
-
-  #data-grid-demo {
-    @include ccc-datagrid;
-  }
+ @include ccc-datagrid;
 }

@@ -12,7 +12,6 @@
       .titulo {
         color: var(--color-principal-claro);
                 font-family: var(--tipografia);
- "Noto Sans";
         font-size: 12px;
         font-style: normal;
         font-weight: 600;
@@ -43,9 +42,8 @@
           box-shadow: 0px -1px 0px 0px var(--color-sombra) inset;
 
           .dx-datagrid-text-content {
-            color: #1a1a1a;
+            color: var( --color-texto);
                     font-family: var(--tipografia);
- "Noto Sans";
             font-size: 12px;
             font-style: normal;
             font-weight: 600;
@@ -76,9 +74,8 @@
         .dx-bordered-bottom-view {
           .dx-row {
             td {
-              color: #1a1a1a;
+              color: var( --color-texto);
                       font-family: var(--tipografia);
- "Noto Sans";
               font-size: 12px;
               font-style: normal;
               font-weight: 400;

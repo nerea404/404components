@@ -4,8 +4,28 @@ import {
   Output,
   EventEmitter,
   ViewChild,
+  ChangeDetectorRef,
 } from '@angular/core';
 import { DxDataGridComponent } from 'devextreme-angular';
+
+interface Options {
+  filterRow: boolean;
+  headerFilter: boolean;
+  columnChooser: boolean;
+  groupPanel: boolean;
+  exportPanel: boolean;
+  rowDragging: any;
+  selection: boolean;
+  filtrosPersonalizados: boolean;
+  colapsarFilas: boolean;
+  sorting: boolean;
+  editing: boolean;
+  columnResizing: boolean;
+  columnReordering: boolean;
+  wordWrap: boolean;
+  rowAlternation: boolean;
+  showBorders: boolean;
+}
 
 @Component({
   selector: 'app-ccc-datagrid',
@@ -13,10 +33,27 @@ import { DxDataGridComponent } from 'devextreme-angular';
   styleUrls: ['./ccc-datagrid.component.scss'],
 })
 export class CccDatagridComponent {
+  options: Options = {
+    filterRow: false,
+    headerFilter: false,
+    columnChooser: false,
+    groupPanel: false,
+    exportPanel: false,
+    rowDragging: { allowReordering: false, showDragIcons: false },
+    selection: false,
+    filtrosPersonalizados: false,
+    colapsarFilas: false,
+    sorting: false,
+    editing: false,
+    columnResizing: false,   
+    columnReordering: false,
+    wordWrap: false,
+    rowAlternation: true,
+    showBorders: true,
+  };
+
   @Input() dataSource: any[] = [];
   @Input() keyExpr: string = 'id';
-  @Input() showBorders: boolean = true;
-  @Input() focusedRowEnabled: boolean = true;
   @Input() columns: any[] = [];
 
   @Input() allowAdding: boolean = false;
@@ -29,125 +66,85 @@ export class CccDatagridComponent {
   @ViewChild(DxDataGridComponent, { static: false })
   dataGrid!: DxDataGridComponent;
 
-  focusedRowKey: any;
+  focusedRowKey: any = null;
 
-  constructor() {}
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {}
 
-  onFocusedRowChanged(e: any) {
-    this.focusedRowKey = e.row.key;
-    this.focusedRowChanged.emit(this.focusedRowKey);
-  }
-
-  createNewRow() {
-    this.dataGrid.instance.addRow();
-    this.dataGrid.instance.deselectAll();
-  }
-
-  editFocusedRow() {
-    if (this.focusedRowKey != null) {
-      const rowIndex = this.dataGrid.instance.getRowIndexByKey(
-        this.focusedRowKey
-      );
-      this.dataGrid.instance.editRow(rowIndex);
-      this.dataGrid.instance.deselectAll();
-    } else {
-      alert('Please select a row to edit.');
+  applyMenuAction(selectedItem: string) {
+    switch (selectedItem) {
+      case 'Selector Fila':
+        this.options.selection = !this.options.selection;
+        break;
+      case 'Filtro Fila':
+        this.options.filterRow = !this.options.filterRow;
+        break;
+      case 'Filtro Cabecera':
+        this.options.headerFilter = !this.options.headerFilter;
+        break;
+      case 'Agrupar Por':
+        this.options.groupPanel = !this.options.groupPanel;
+        break;
+      case 'Colapsar Filas':
+        this.toggleCollapseRows();
+        break;
+      case 'Organizar Columnas':
+        this.options.columnReordering = !this.options.columnReordering;
+        this.options.columnResizing = !this.options.columnResizing; 
+        break;
+      case 'Filtros Personalizados':
+        this.options.filtrosPersonalizados = !this.options.filtrosPersonalizados;
+        break;
+      default:
+        break;
     }
+    this.applyGridOptions();
+    this.cdr.detectChanges(); 
   }
 
-  deleteFocusedRow() {
-    if (this.focusedRowKey != null) {
-      const rowIndex = this.dataGrid.instance.getRowIndexByKey(
-        this.focusedRowKey
-      );
-      this.dataGrid.instance.deleteRow(rowIndex);
-      this.dataGrid.instance.deselectAll();
+  toggleCollapseRows() {
+    const visibleRows = this.dataGrid.instance.getVisibleRows();
+    const isAnyRowExpanded = visibleRows.some(row => row.rowType === 'data' && row.isExpanded);
+
+    if (isAnyRowExpanded) {
+      this.collapseAllRows(visibleRows);
     } else {
-      alert('Please select a row to delete.');
+      this.expandAllRows(visibleRows);
     }
+    console.log('Filas colapsadas o expandidas según estado actual');
   }
 
-  duplicateFocusedRow() {
-    if (this.focusedRowKey != null) {
-      const focusedRowIndex = this.dataGrid.instance.getRowIndexByKey(
-        this.focusedRowKey
-      );
-      const focusedRowData =
-        this.dataGrid.instance.getVisibleRows()[focusedRowIndex].data;
-
-      if (focusedRowData) {
-        const duplicatedRowData = {
-          ...focusedRowData,
-          id: this.generateNewId(),
-        };
-        this.dataSource.push(duplicatedRowData);
-        this.dataGrid.instance.refresh(); 
-        this.dataGrid.instance.deselectAll();
-      } else {
-        alert('No se pudo duplicar la fila enfocada.');
+  collapseAllRows(visibleRows: any[]) {
+    visibleRows.forEach(row => {
+      if (row.isExpanded) {
+        this.dataGrid.instance.collapseRow(row.key);
       }
-    } else {
-      alert('Por favor, selecciona una fila para duplicar.');
-    }
+    });
   }
 
-  generateNewId() {
-    return Math.max(...this.dataSource.map((item) => item.id)) + 1;
+  expandAllRows(visibleRows: any[]) {
+    visibleRows.forEach(row => {
+      this.dataGrid.instance.expandRow(row.key);
+    });
   }
 
-  // Función para exportar a Excel o PDF
-  // exportTo(format: string) {
-  //   if (format === 'excel') {
-  //     this.exportToExcel();
-  //   } else if (format === 'pdf') {
-  //     this.exportToPDF();
-  //   }
-  // }
+  applyGridOptions() {
+    const dataGridInstance = this.dataGrid.instance;
 
-  // // Función para exportar a Excel
-  // exportToExcel() {
-  //   const workbook = new ExcelJS.Workbook();
-  //   const worksheet = workbook.addWorksheet('Sheet 1');
-
-  //   exportDataGrid({
-  //     component: this.dataGrid.instance,
-  //     worksheet: worksheet,
-  //     autoFilterEnabled: true
-  //   }).then(() => {
-  //     workbook.xlsx.writeBuffer().then((buffer: BlobPart) => {
-  //       const blob = new Blob([buffer], { type: 'application/octet-stream' });
-  //       saveAs(blob, 'tabla-exportada.xlsx');
-  //     });
-  //   });
-  // }
-
-  // // Función para exportar a PDF
-  // exportToPDF() {
-  //   const doc = new jsPDF();
-
-  //   doc.text('Data Grid Export', 14, 16);
-
-  //   const columns = this.columns.map(col => ({ title: col.caption, dataKey: col.dataField }));
-  //   const rows = this.dataSource.map(item => {
-  //     const row: any = {};
-  //     this.columns.forEach(col => {
-  //       row[col.dataField] = item[col.dataField];
-  //     });
-  //     return row;
-  //   });
-
-  //   doc.autoTable({
-  //     head: [columns],
-  //     body: rows,
-  //     startY: 20,
-  //   });
-
-  //   doc.save('tabla-exportada.pdf');
-  // }
-
-  onSaved($event: Event) {
-    throw new Error('Method not implemented.');
+    dataGridInstance.option('filterRow', { visible: this.options.filterRow });
+    dataGridInstance.option('headerFilter', { visible: this.options.headerFilter });
+    dataGridInstance.option('columnChooser', { enabled: this.options.columnChooser });
+    dataGridInstance.option('groupPanel', { visible: this.options.groupPanel });
+    dataGridInstance.option('rowDragging', { allowReordering: this.options.rowDragging.allowReordering });
+    dataGridInstance.option('selection', { mode: this.options.selection ? 'multiple' : 'none' });
+    dataGridInstance.option('sorting', { mode: this.options.sorting ? 'multiple' : 'none' });
+    dataGridInstance.option('columnAutoWidth', this.options.columnResizing);
+    dataGridInstance.option('allowColumnReordering', this.options.columnReordering);  
+    dataGridInstance.option('allowColumnResizing', this.options.columnResizing);    
+    dataGridInstance.option('wordWrapEnabled', this.options.wordWrap);
+    dataGridInstance.option('rowAlternationEnabled', this.options.rowAlternation);
+    dataGridInstance.option('showBorders', this.options.showBorders);
+    dataGridInstance.option('filterPanel', { visible: this.options.filtrosPersonalizados });
   }
 }

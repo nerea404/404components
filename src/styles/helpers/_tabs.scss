@@ -25,7 +25,7 @@
         }
 
         .dx-tab-selected {
-          background: #fff;
+          background: var(--color-blanco);
           border-bottom: none;
           &::after {
             border-radius: 5px 5px 0px 0px;
@@ -54,7 +54,7 @@
     .dx-tabpanel-container {
       border-right: 1px solid var(--color-sombra);
       border-left: 1px solid var(--color-sombra);
-      background: #fff;
+      background: var(--color-blanco);
       padding: 12px;
 
       .dx-multiview-wrapper {

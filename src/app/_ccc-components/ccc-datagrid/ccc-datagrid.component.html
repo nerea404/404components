@@ -1,60 +1,72 @@
-<div id="data-grid-demo">
-  <div class="button-container">
-    <button (click)="createNewRow()">
-      <i class="dx-icon dx-icon-add"></i>
-    </button>
-    <button (click)="deleteFocusedRow()">
-      <i class="dx-icon dx-icon-trash"></i>
-    </button>
-    <button (click)="editFocusedRow()">
-      <i class="dx-icon dx-icon-edit"></i>
-    </button>
+<div class="datagrid">
+  <div class="botones-filtros">
+    <!-- Botón para activar el menú -->
+    <button mat-button [matMenuTriggerFor]="popup" ></button>
 
-    <button (click)="duplicateFocusedRow()">
-      <i class="dx-icon dx-icon-copy"></i>
-    </button>
-
-    <!-- <div class="dropdown">
-      <button>
-        <i class="dx-icon dx-icon-print"></i>
+    <!-- Menú de Angular Material -->
+    <mat-menu #popup="matMenu" class="menu-desplegable">
+      <button mat-menu-item [matMenuTriggerFor]="filtros" class="desp-filtros">
+        Activar filtros
       </button>
-      <div class="dropdown-content">
-        <button (click)="exportTo('excel')">Exportar a Excel</button>
-        <button (click)="exportTo('pdf')">Exportar a PDF</button>
-      </div>
-    </div> -->
-   
+      <button mat-menu-item (click)="applyMenuAction('Colapsar Filas')" class="colapsar-filas">
+        Colapsar filas
+      </button>
+      <button mat-menu-item (click)="applyMenuAction('Organizar Columnas')" class="organizar-columnas">
+        Organizar columnas
+      </button>
+      <button
+        mat-menu-item
+        (click)="applyMenuAction('Filtros Personalizados')" class="filtro-personalizado"
+      >
+        Filtros personalizados
+      </button>
+    </mat-menu>
+
+    <!-- Submenú para los filtros -->
+    <mat-menu #filtros="matMenu" class="submenu-desplegable">
+      <mat-checkbox [(ngModel)]="options.selection" (change)="applyGridOptions()"
+        >Selector fila</mat-checkbox
+      >
+      <mat-checkbox [(ngModel)]="options.filterRow" (change)="applyGridOptions()"
+        >Filtro fila</mat-checkbox
+      >
+      <mat-checkbox [(ngModel)]="options.headerFilter" (change)="applyGridOptions()"
+        >Filtro cabecera</mat-checkbox
+      >
+      <mat-checkbox [(ngModel)]="options.groupPanel" (change)="applyGridOptions()"
+        >Agrupar por</mat-checkbox
+      >
+    </mat-menu>
   </div>
-  <dx-data-grid
-    [dataSource]="dataSource"
-    [keyExpr]="keyExpr"
-    [showBorders]="showBorders"
-    [focusedRowEnabled]="focusedRowEnabled"
-    (onFocusedRowChanged)="onFocusedRowChanged($event)"
-    [rowAlternationEnabled]="true"
 
-  >
-    <dxo-paging [enabled]="false"></dxo-paging>
-    <dxo-editing
-      mode="form"
-      [allowUpdating]="allowUpdating"
-      [allowAdding]="allowAdding"
-      [allowDeleting]="allowDeleting"
-      (onSaved)="onSaved($event)"
-    ></dxo-editing>
-
-    <dxi-column
-      *ngFor="let column of columns"
-      [dataField]="column.dataField"
-      [caption]="column.caption"
-      [width]="column.width"
+  <!-- Panel de búsqueda y configuración del grid -->
+  <div class="data-grid-container">
+    <dx-data-grid
+      id="data-grid-demo"
+      [dataSource]="dataSource"
+      [keyExpr]="keyExpr"
+      [columns]="columns"
+      [columnAutoWidth]="true"
+      [showBorders]="true"
+      [rowAlternationEnabled]="true"
+      [allowColumnReordering]="options.columnReordering" 
+      [allowColumnResizing]="options.columnResizing"
+      [columnResizingMode]="'nextColumn'"
+      [sorting]="{ mode: options.sorting ? 'multiple' : 'none' }"
+      [filterRow]="{ visible: options.filterRow }"
+      [headerFilter]="{ visible: options.headerFilter }"
+      [columnChooser]="{ enabled: options.columnChooser }"
+      [groupPanel]="{ visible: options.groupPanel }"
+      [selection]="{ mode: options.selection ? 'multiple' : 'none' }"
+      [wordWrapEnabled]="options.wordWrap"
+      [rowDragging]="options.rowDragging"
     >
-      <dxo-lookup
-        *ngIf="column.lookup"
-        [dataSource]="column.lookup.dataSource"
-        [displayExpr]="column.lookup.displayExpr"
-        [valueExpr]="column.lookup.valueExpr"
-      ></dxo-lookup>
-    </dxi-column>
-  </dx-data-grid>
+      <dxo-scrolling mode="infinite"></dxo-scrolling>
+      <dxo-paging [enabled]="false"></dxo-paging>
+
+      <dxo-search-panel [visible]="true" [width]="240" placeholder="Buscar..."></dxo-search-panel>
+
+      <dxo-filter-panel [visible]="options.filtrosPersonalizados" [filterEnabled]="true"></dxo-filter-panel>
+    </dx-data-grid>
+  </div>
 </div>

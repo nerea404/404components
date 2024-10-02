@@ -14,6 +14,7 @@ import { TagBoxModule } from '../_secs/tag-box/tag-box.module';
 import { TabsModule } from '../_secs/tabs/tabs.module';
 import { AccordionModule } from "../_secs/accordion/accordion.module";
 import { DataGridModule } from "../_secs/data-grid/data-grid.module";
+import { CccTabsModule } from "../../_ccc-components/ccc-tabs/ccc-tabs.module";
 
 
 
@@ -34,7 +35,8 @@ import { DataGridModule } from "../_secs/data-grid/data-grid.module";
     TagBoxModule,
     TabsModule,
     AccordionModule,
-    DataGridModule
+    DataGridModule,
+    CccTabsModule
 ]
 })
 export class BodyModule { }

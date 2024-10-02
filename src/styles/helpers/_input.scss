@@ -13,7 +13,7 @@
         .dx-texteditor-container {
           border-radius: 4px;
           border: 1px solid #8891aa !important;
-          background: #fff;
+          background: var(--color-blanco);
           input {
             padding: 6px 8px;
             min-height: auto;
@@ -51,8 +51,8 @@
       .dx-state-focused {
         .dx-texteditor-container {
           border-radius: 4px;
-          border: 0px solid #fff !important;
-          background: #fff;
+          border: 0px solid var(--color-blanco) !important;
+          background: var(--color-blanco);
           box-shadow: 0px 0px 1px 2px var(--color-bordes-input);
           input {
             padding: 6px 8px;
@@ -108,7 +108,7 @@
   dx-number-box {
     border-radius: 4px;
     border: 1px solid #8891aa;
-    background: #fff;
+    background: var(--color-blanco);
 
     input {
       padding: 6px 8px;
@@ -142,8 +142,8 @@
 
   .dx-state-focused {
     border-radius: 4px;
-    border: 1px solid #fff !important;
-    background: #fff;
+    border: 1px solid var(--color-blanco) !important;
+    background: var(--color-blanco);
     box-shadow: 0px 0px 1px 2px var(--color-bordes-input);
     input {
       padding: 6px 8px;
@@ -166,7 +166,7 @@
   .boton-accion {
     border-radius: 5.313px;
     border: 1.063px solid var(--color-fondo-e7);
-    background: #fff;
+    background: var(--color-blanco);
     padding: 3.755px 4.25px 4.745px 4.25px;
     cursor: pointer;
     width: 36px;
@@ -292,7 +292,7 @@
     .dx-dropdowneditor-input-wrapper {
       border-radius: 4px;
       border: 1px solid #8891aa;
-      background: #fff;
+      background: var(--color-blanco);
 
       .dx-texteditor-input-container {
         input {
@@ -392,7 +392,7 @@
     .dx-dropdowneditor-input-wrapper {
       border-radius: 4px;
       border: 1px solid #8891aa;
-      background: #fff;
+      background: var(--color-blanco);
 
       .dx-texteditor-input-container {
         padding: 0px;
@@ -440,7 +440,7 @@
   .dx-dropdowneditor-active {
     .dx-dropdowneditor-input-wrapper {
       border: 1px solid var(--color-ico-submenu);
-      background: #fff;
+      background: var(--color-blanco);
       box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.9),
         0px 0px 0px 2px var(--color-bordes-input);
     }

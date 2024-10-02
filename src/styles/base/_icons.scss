@@ -25,82 +25,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-enviar:before {
-  content: "\e90f";
-  color: #637381;
-}
-
-.icon-importar:before {
-  content: "\e910";
-  color: #637381;
-}
-
-.icon-trash:before {
-  content: "\e90a";
-}
-
-.icon-plus-circle:before {
-  content: "\e90d";
-}
-
-.icon-monitor:before {
-  content: "\e90c";
-}
-
-.icon-file:before {
-  content: "\e90b";
-}
-
-.icon-edit:before {
-  content: "\e90e";
-}
-
-.icon-arrow-open:before {
-  content: "\e909";
-  color: #637381;
-}
-
-.icon-arrow-close:before {
-  content: "\e908";
-  color: #637381;
-}
-
-.icon-ico-calendario:before {
-  content: "\e900";
-  color: #fff;
-}
-
-.icon-ico-ejercicio:before {
+.icon-add-cicle:before {
   content: "\e901";
-  color: #fff;
 }
 
-.icon-ico-notificacion:before {
+.icon-alert-circle:before {
   content: "\e902";
-  color: #fff;
+  color: #b71d18;
 }
 
-.icon-ico-oficina:before {
+.icon-remove-circle:before {
+  content: "\e908";
+}
+
+.icon-acept-circle:before {
+  content: "\e900";
+  color: #18a94d;
+}
+
+.icon-btn-filtros:before {
   content: "\e903";
-  color: #fff;
-}
-
-.icon-config-filtros:before {
-  content: "\e911";
   color: #637381;
 }
 
-.icon-filtros-avanzados:before {
-  content: "\e912";
+.icon-colapsar:before {
+  content: "\e904";
   color: #637381;
 }
 
-.icon-close:before {
-  content: "\e913";
+.icon-filtros:before {
+  content: "\e905";
+  color: #637381;
 }
 
-.icon-filtros-cabecera:before {
-  content: "\e915";
-  color: #1A1A1A;
+.icon-organizar:before {
+  content: "\e906";
+  color: #637381;
+}
 
+.icon-personalizados:before {
+  content: "\e907";
+  color: #637381;
 }
