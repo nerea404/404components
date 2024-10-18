@@ -15,6 +15,8 @@ import { TabsModule } from '../_secs/tabs/tabs.module';
 import { AccordionModule } from "../_secs/accordion/accordion.module";
 import { DataGridModule } from "../_secs/data-grid/data-grid.module";
 import { CccTabsModule } from "../../_ccc-components/ccc-tabs/ccc-tabs.module";
+import { TreeListModule } from '../_secs/tree-list/tree-list.module';
+import { DropdownSearchModule } from '../_secs/dropdown-search/dropdown-search.module';
 
 
 
@@ -36,7 +38,9 @@ import { CccTabsModule } from "../../_ccc-components/ccc-tabs/ccc-tabs.module";
     TabsModule,
     AccordionModule,
     DataGridModule,
-    CccTabsModule
+    CccTabsModule,
+    TreeListModule,
+    DropdownSearchModule
 ]
 })
 export class BodyModule { }

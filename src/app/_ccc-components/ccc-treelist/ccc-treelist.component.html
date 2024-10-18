@@ -1,0 +1,87 @@
+<div class="treelist-container">
+  <div class="botones-filtros">
+    <button mat-button [matMenuTriggerFor]="popup"></button>
+
+    <mat-menu #popup="matMenu" class="menu-desplegable">
+      <button mat-menu-item [matMenuTriggerFor]="filtros" class="desp-filtros">
+        Activar filtros
+      </button>
+      <button
+        mat-menu-item
+        (click)="applyMenuAction('Colapsar Filas')"
+        class="colapsar-filas"
+      >
+        Colapsar filas
+      </button>
+      <button
+        mat-menu-item
+        (click)="applyMenuAction('Organizar Columnas')"
+        class="organizar-columnas"
+      >
+        Organizar columnas
+      </button>
+      <button
+        mat-menu-item
+        (click)="applyMenuAction('Filtros Personalizados')"
+        class="filtro-personalizado"
+      >
+        Filtros personalizados
+      </button>
+    </mat-menu>
+
+    <!-- Submenú para los filtros -->
+    <mat-menu #filtros="matMenu" class="submenu-desplegable">
+      <mat-checkbox
+        [(ngModel)]="options.selection"
+        (change)="applyTreeListOptions()"
+      >
+        Selector fila
+      </mat-checkbox>
+      <mat-checkbox
+        [(ngModel)]="options.filterRow"
+        (change)="applyTreeListOptions()"
+      >
+        Filtro fila
+      </mat-checkbox>
+      <mat-checkbox
+        [(ngModel)]="options.headerFilter"
+        (change)="applyTreeListOptions()"
+      >
+        Filtro cabecera
+      </mat-checkbox>
+      <mat-checkbox
+        [(ngModel)]="options.groupPanel"
+        (change)="applyTreeListOptions()"
+      >
+        Agrupar por
+      </mat-checkbox>
+    </mat-menu>
+  </div>
+
+  <div class="ccc-treelist-container">
+    <dx-tree-list
+      #treeList
+      [dataSource]="menu"
+      keyExpr="id"
+      parentIdExpr="parentId"
+      [columnAutoWidth]="true"
+      [wordWrapEnabled]="true"
+      [showBorders]="true"
+      [rowAlternationEnabled]="true"
+      (onRowClick)="onRowClick($event)"
+    >
+      <dxo-search-panel [visible]="true" width="250"></dxo-search-panel>
+      <dxo-selection mode="multiple"></dxo-selection>
+      <dxi-column
+        dataField="nombre"
+        caption="Nombre"
+        [width]="300"
+      ></dxi-column>
+      <dxi-column
+        dataField="categoria"
+        caption="Categoría"
+        [minWidth]="200"
+      ></dxi-column>
+    </dx-tree-list>
+  </div>
+</div>

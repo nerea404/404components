@@ -1,0 +1,186 @@
+@import "../variables";
+
+@mixin ccc-dropdown-search {
+  app-ccc-dropdown-search {
+    .ccc-dropdown-search {
+      dx-drop-down-box#dropdown {
+        border-radius: 4px;
+        border: 1px solid #8891aa;
+        background: #fff;
+        max-width: 468px;
+
+        .dx-texteditor-container {
+          .dx-texteditor-input-container {
+            .dx-texteditor-input {
+              padding: 4px 8px;
+              min-height: 26px;
+            }
+
+            .dx-placeholder {
+              color: var(--color-texto);
+              font-family: var(--tipografia);
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              letter-spacing: 0.1px;
+
+              &::before {
+                padding: 6px 8px;
+              }
+            }
+
+            input {
+              color: var(--color-texto);
+              font-family: var(--tipografia);
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              letter-spacing: 0.1px;
+              text-transform: uppercase;
+            }
+          }
+
+          .dx-texteditor-buttons-container {
+            border-radius: 0px 4px 4px 0px;
+            border-left: 1px solid #e1e3ea;
+            background: #f4f4f6;
+            .dx-clear-button-area {
+              display: none;
+            }
+
+            .dx-dropdowneditor-button {
+              padding: 0px;
+              .dx-dropdowneditor-icon {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      dx-drop-down-box#dropdown.dx-dropdowneditor-active {
+        border: 1px solid #1379a8;
+
+      }
+    }
+  }
+
+  .desplegable-dropdown-search {
+    .dx-overlay-content {
+      border-radius: 0px 0px 6px 6px;
+      border: 1px solid #dedede;
+      background: #fff;
+      box-shadow: 2px 2px 10px 0px rgba(82, 82, 82, 0.25);
+      max-height: 258px !important;
+      .dx-popup-content {
+        padding: 6px;
+        .div-btn-filtros {
+          width: fit-content;
+          position: absolute;
+          right: 6px;
+          .btn-otros-filtros {
+            border-radius: 4px;
+            border: 1px solid #d0dbe1;
+            background: #f9f9f9;
+            padding: 6px 6.47px;
+            &::after {
+              font-family: "icomoon";
+              content: "\e900";
+              font-size: 18px;
+              opacity: 1;
+              color: #637381;
+            }
+          }
+        }
+
+        dx-data-grid {
+          .dx-datagrid {
+            .dx-gridbase-a11y-status-container {
+              display: none;
+            }
+
+            .dx-datagrid-headers {
+              max-width: 414px;
+              border: none;
+              .dx-datagrid-table {
+                .dx-datagrid-filter-row {
+                  .dx-editor-cell {
+                    border: none;
+                    .dx-editor-with-menu {
+                      border-radius: 4px;
+                      border: 1px solid #d0dbe1;
+                      background: #f9f9f9;
+                    }
+                    input {
+                    }
+                  }
+                }
+              }
+
+              .dx-header-row {
+                display: none;
+              }
+            }
+
+            .dx-hidden,
+            .dx-datagrid-drag-header,
+            
+            .dx-header-filter-menu {
+              display: none !important;
+            }
+
+            div:nth-child(9) {
+              display: none !important;
+            }
+
+            .dx-bordered-bottom-view {
+              border: none;
+              margin-top: 16px;
+              tbody {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+              }
+              .dx-row {
+                border-radius: 8px;
+                border: 1px solid #e7e7e7;
+
+                &:hover {
+                  background-color: #e1e3ea;
+                  td {
+                    background: none;
+                  }
+                }
+              }
+
+              .dx-state-hover:not(.dx-selection):not(.dx-row-inserted):not(
+                  .dx-row-removed
+                ):not(.dx-edit-row):not(.dx-row-focused)
+                > td:not(.dx-focused) {
+                background: none;
+              }
+
+              .dx-selection {
+                border-radius: 8px;
+                border: 1px solid #e7e7e7;
+                background: #d0dbe1;
+                td {
+                  background: none;
+                  border: none;
+                }
+              }
+            }
+
+            // .dx-datagrid-focus-overlay {
+            //   border-radius: 4px;
+            //   border: 1px solid #1379a8;
+            //   background: #fff;
+            // }
+          }
+        }
+      }
+    }
+  }
+}

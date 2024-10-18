@@ -4,77 +4,79 @@
             "id": 1,
             "parentId": null,
             "nombre": "Ventas",
+            "categoria": "Operaciones Comerciales",
             "items": [
                 {
                     "id": 2,
                     "parentId": 1,
                     "nombre": "Documentos de ventas",
+                    "categoria": "Gestión de Documentos",
                     "isExpanded": true,
                     "items": [
                         {
                             "id": 3,
                             "parentId": 2,
                             "nombre": "Presupuestos",
-                            "categoria": "Documentos de ventas",
+                            "categoria": "Planificación Financiera",
                             "tabParams": {
                                 "etiquetaTab": "Paises",
                                 "componenteTab": "ListaPaisComponent",
-                                "paramterosComponente": {}
+                                "parametrosComponente": {}
                             }
                         },
                         {
                             "id": 4,
                             "parentId": 2,
                             "nombre": "Pedidos",
-                            "categoria": "Documentos de ventas",
+                            "categoria": "Gestión de Pedidos",
                             "tabParams": {
                                 "etiquetaTab": "Formulario",
                                 "componenteTab": "FormClienteComponent",
-                                "paramterosComponente": {}
+                                "parametrosComponente": {}
                             }
                         },
                         {
                             "id": 5,
                             "parentId": 2,
                             "nombre": "Albaranes",
-                            "categoria": "Documentos de ventas",
+                            "categoria": "Logística",
                             "tabParams": {
                                 "etiquetaTab": "Albaranes",
                                 "componenteTab": "AlbaranComponent",
-                                "paramterosComponente": {}
+                                "parametrosComponente": {}
                             }
                         },
                         {
                             "id": 6,
                             "parentId": 2,
                             "nombre": "Abonos",
-                            "categoria": "Documentos de ventas",
+                            "categoria": "Créditos",
                             "tabParams": {
                                 "etiquetaTab": "Clientes",
                                 "componenteTab": "ListaClienteComponent",
-                                "paramterosComponente": {}
+                                "parametrosComponente": {}
                             }
                         },
                         {
                             "id": 7,
                             "parentId": 2,
                             "nombre": "Facturas",
-                            "categoria": "Documentos de ventas",
+                            "categoria": "Contabilidad",
                             "tabParams": {
                                 "etiquetaTab": "DataGrid",
                                 "componenteTab": "FichaPaisComponent",
-                                "paramterosComponente": {}
+                                "parametrosComponente": {}
                             }
                         },
                         {
                             "id": 8,
                             "parentId": 2,
                             "nombre": "Facturas proforma",
-                            "categoria": "Documentos de ventas",
+                            "categoria": "Facturación",
                             "tabParams": {
                                 "etiquetaTab": "Inputs",
                                 "componenteTab": "InputsComponent",
-                                "paramterosComponente": {}
+                                "parametrosComponente": {}
                             }
                         }
                     ]
@@ -83,62 +85,72 @@
                     "id": 9,
                     "parentId": 1,
                     "nombre": "Clientes",
+                    "categoria": "Gestión de Clientes",
                     "isExpanded": true,
                     "items": [
                         {
                             "id": 10,
                             "parentId": 9,
                             "nombre": "Clientes",
-                            "categoria": "Clientes",
+                            "categoria": "Base de Clientes",
                             "items": [
                                 {
                                     "id": 11,
                                     "parentId": 10,
                                     "nombre": "Últimas Noticias",
+                                    "categoria": "Comunicación",
                                     "items": [
                                         {
                                             "id": 12,
                                             "parentId": 11,
                                             "nombre": "Últimas Noticias",
+                                            "categoria": "Actualizaciones",
                                             "items": [
                                                 {
                                                     "id": 100,
                                                     "parentId": 12,
-                                                    "nombre": "Últimas Noticias"
+                                                    "nombre": "Últimas Noticias",
+                                                    "categoria": "Novedades"
                                                 },
                                                 {
                                                     "id": 101,
                                                     "parentId": 12,
-                                                    "nombre": "Tendencias"
+                                                    "nombre": "Tendencias",
+                                                    "categoria": "Innovación"
                                                 },
                                                 {
                                                     "id": 102,
                                                     "parentId": 12,
-                                                    "nombre": "Eventos"
+                                                    "nombre": "Eventos",
+                                                    "categoria": "Reuniones"
                                                 }
                                             ]
                                         },
                                         {
                                             "id": 13,
                                             "parentId": 11,
-                                            "nombre": "Tendencias"
+                                            "nombre": "Tendencias",
+                                            "categoria": "Análisis"
                                         },
                                         {
                                             "id": 14,
                                             "parentId": 11,
-                                            "nombre": "Eventos"
+                                            "nombre": "Eventos",
+                                            "categoria": "Organización"
                                         }
                                     ]
                                 },
                                 {
                                     "id": 15,
                                     "parentId": 10,
-                                    "nombre": "Tendencias"
+                                    "nombre": "Tendencias",
+                                    "categoria": "Estadísticas"
                                 },
                                 {
                                     "id": 16,
                                     "parentId": 10,
-                                    "nombre": "Eventos"
+                                    "nombre": "Eventos",
+                                    "categoria": "Planificación"
                                 }
                             ]
                         },
@@ -146,39 +158,45 @@
                             "id": 17,
                             "parentId": 9,
                             "nombre": "Clientes Potenciales",
-                            "categoria": "Clientes",
+                            "categoria": "Oportunidades",
                             "items": [
                                 {
                                     "id": 18,
                                     "parentId": 17,
                                     "nombre": "Últimas Noticias",
+                                    "categoria": "Actualizaciones",
                                     "items": [
                                         {
                                             "id": 19,
                                             "parentId": 18,
-                                            "nombre": "Últimas Noticias"
+                                            "nombre": "Últimas Noticias",
+                                            "categoria": "Novedades"
                                         },
                                         {
                                             "id": 20,
                                             "parentId": 18,
-                                            "nombre": "Tendencias"
+                                            "nombre": "Tendencias",
+                                            "categoria": "Innovación"
                                         },
                                         {
                                             "id": 21,
                                             "parentId": 18,
-                                            "nombre": "Eventos"
+                                            "nombre": "Eventos",
+                                            "categoria": "Reuniones"
                                         }
                                     ]
                                 },
                                 {
                                     "id": 22,
                                     "parentId": 17,
-                                    "nombre": "Tendencias"
+                                    "nombre": "Tendencias",
+                                    "categoria": "Estadísticas"
                                 },
                                 {
                                     "id": 23,
                                     "parentId": 17,
-                                    "nombre": "Eventos"
+                                    "nombre": "Eventos",
+                                    "categoria": "Organización"
                                 }
                             ]
                         },
@@ -186,39 +204,45 @@
                             "id": 24,
                             "parentId": 9,
                             "nombre": "Familias Clientes",
-                            "categoria": "Clientes",
+                            "categoria": "Segmentación",
                             "items": [
                                 {
                                     "id": 25,
                                     "parentId": 24,
                                     "nombre": "Últimas Noticias",
+                                    "categoria": "Actualizaciones",
                                     "items": [
                                         {
                                             "id": 26,
                                             "parentId": 25,
-                                            "nombre": "Últimas Noticias"
+                                            "nombre": "Últimas Noticias",
+                                            "categoria": "Novedades"
                                         },
                                         {
                                             "id": 27,
                                             "parentId": 25,
-                                            "nombre": "Tendencias"
+                                            "nombre": "Tendencias",
+                                            "categoria": "Innovación"
                                         },
                                         {
                                             "id": 28,
                                             "parentId": 25,
-                                            "nombre": "Eventos"
+                                            "nombre": "Eventos",
+                                            "categoria": "Reuniones"
                                         }
                                     ]
                                 },
                                 {
                                     "id": 29,
                                     "parentId": 24,
-                                    "nombre": "Tendencias"
+                                    "nombre": "Tendencias",
+                                    "categoria": "Estadísticas"
                                 },
                                 {
                                     "id": 30,
                                     "parentId": 24,
-                                    "nombre": "Eventos"
+                                    "nombre": "Eventos",
+                                    "categoria": "Planificación"
                                 }
                             ]
                         },
@@ -226,39 +250,45 @@
                             "id": 31,
                             "parentId": 9,
                             "nombre": "Subfamilias clientes",
-                            "categoria": "Clientes",
+                            "categoria": "Subsegmentación",
                             "items": [
                                 {
                                     "id": 32,
                                     "parentId": 31,
                                     "nombre": "Últimas Noticias",
+                                    "categoria": "Actualizaciones",
                                     "items": [
                                         {
                                             "id": 33,
                                             "parentId": 32,
-                                            "nombre": "Últimas Noticias"
+                                            "nombre": "Últimas Noticias",
+                                            "categoria": "Novedades"
                                         },
                                         {
                                             "id": 34,
                                             "parentId": 32,
-                                            "nombre": "Tendencias"
+                                            "nombre": "Tendencias",
+                                            "categoria": "Innovación"
                                         },
                                         {
                                             "id": 35,
                                             "parentId": 32,
-                                            "nombre": "Eventos"
+                                            "nombre": "Eventos",
+                                            "categoria": "Reuniones"
                                         }
                                     ]
                                 },
                                 {
                                     "id": 36,
-                                    "parentId": 31,
-                                    "nombre": "Tendencias"
+                                            "parentId": 31,
+                                            "nombre": "Tendencias",
+                                            "categoria": "Estadísticas"
                                 },
                                 {
                                     "id": 37,
-                                    "parentId": 31,
-                                    "nombre": "Eventos"
+                                            "parentId": 31,
+                                            "nombre": "Eventos",
+                                            "categoria": "Planificación"
                                 }
                             ]
                         }
@@ -268,45 +298,52 @@
                     "id": 38,
                     "parentId": 1,
                     "nombre": "Cobros",
+                    "categoria": "Finanzas",
                     "isExpanded": true,
                     "items": [
                         {
                             "id": 39,
                             "parentId": 38,
                             "nombre": "Cobros",
-                            "categoria": "Cobros",
+                            "categoria": "Operaciones Financieras",
                             "items": [
                                 {
                                     "id": 40,
                                     "parentId": 39,
                                     "nombre": "Últimas Noticias",
+                                    "categoria": "Actualizaciones",
                                     "items": [
                                         {
                                             "id": 41,
                                             "parentId": 40,
-                                            "nombre": "Últimas Noticias"
+                                            "nombre": "Últimas Noticias",
+                                            "categoria": "Novedades"
                                         },
                                         {
                                             "id": 42,
                                             "parentId": 40,
-                                            "nombre": "Tendencias"
+                                            "nombre": "Tendencias",
+                                            "categoria": "Innovación"
                                         },
                                         {
                                             "id": 43,
-                                            "parentId": 42,
-                                            "nombre": "Eventos"
+                                            "parentId": 40,
+                                            "nombre": "Eventos",
+                                            "categoria": "Reuniones"
                                         }
                                     ]
                                 },
                                 {
                                     "id": 44,
                                     "parentId": 39,
-                                    "nombre": "Tendencias"
+                                    "nombre": "Tendencias",
+                                    "categoria": "Estadísticas"
                                 },
                                 {
                                     "id": 45,
                                     "parentId": 39,
-                                    "nombre": "Eventos"
+                                    "nombre": "Eventos",
+                                    "categoria": "Planificación"
                                 }
                             ]
                         },
@@ -314,39 +351,45 @@
                             "id": 46,
                             "parentId": 38,
                             "nombre": "Cartas de reclamaciones",
-                            "categoria": "Cobros",
+                            "categoria": "Atención al Cliente",
                             "items": [
                                 {
                                     "id": 47,
                                     "parentId": 46,
                                     "nombre": "Últimas Noticias",
+                                    "categoria": "Actualizaciones",
                                     "items": [
                                         {
                                             "id": 48,
                                             "parentId": 47,
-                                            "nombre": "Últimas Noticias"
+                                            "nombre": "Últimas Noticias",
+                                            "categoria": "Novedades"
                                         },
                                         {
                                             "id": 49,
                                             "parentId": 47,
-                                            "nombre": "Tendencias"
+                                            "nombre": "Tendencias",
+                                            "categoria": "Innovación"
                                         },
                                         {
                                             "id": 50,
                                             "parentId": 47,
-                                            "nombre": "Eventos"
+                                            "nombre": "Eventos",
+                                            "categoria": "Reuniones"
                                         }
                                     ]
                                 },
                                 {
                                     "id": 51,
                                     "parentId": 46,
-                                    "nombre": "Tendencias"
+                                    "nombre": "Tendencias",
+                                    "categoria": "Estadísticas"
                                 },
                                 {
                                     "id": 52,
                                     "parentId": 46,
-                                    "nombre": "Eventos"
+                                    "nombre": "Eventos",
+                                    "categoria": "Planificación"
                                 }
                             ]
                         },
@@ -354,39 +397,45 @@
                             "id": 53,
                             "parentId": 38,
                             "nombre": "Vencimientos",
-                            "categoria": "Cobros",
+                            "categoria": "Gestión de Pagos",
                             "items": [
                                 {
                                     "id": 54,
                                     "parentId": 53,
                                     "nombre": "Últimas Noticias",
+                                    "categoria": "Actualizaciones",
                                     "items": [
                                         {
                                             "id": 55,
                                             "parentId": 54,
-                                            "nombre": "Últimas Noticias"
+                                            "nombre": "Últimas Noticias",
+                                            "categoria": "Novedades"
                                         },
                                         {
                                             "id": 56,
                                             "parentId": 54,
-                                            "nombre": "Tendencias"
+                                            "nombre": "Tendencias",
+                                            "categoria": "Innovación"
                                         },
                                         {
                                             "id": 57,
                                             "parentId": 54,
-                                            "nombre": "Eventos"
+                                            "nombre": "Eventos",
+                                            "categoria": "Reuniones"
                                         }
                                     ]
                                 },
                                 {
                                     "id": 58,
                                     "parentId": 53,
-                                    "nombre": "Tendencias"
+                                    "nombre": "Tendencias",
+                                    "categoria": "Estadísticas"
                                 },
                                 {
                                     "id": 59,
                                     "parentId": 53,
-                                    "nombre": "Eventos"
+                                    "nombre": "Eventos",
+                                    "categoria": "Planificación"
                                 }
                             ]
                         },
@@ -394,39 +443,45 @@
                             "id": 60,
                             "parentId": 38,
                             "nombre": "Remesa bancaria",
-                            "categoria": "Cobros",
+                            "categoria": "Banca",
                             "items": [
                                 {
                                     "id": 61,
                                     "parentId": 60,
                                     "nombre": "Últimas Noticias",
+                                    "categoria": "Actualizaciones",
                                     "items": [
                                         {
                                             "id": 62,
                                             "parentId": 61,
-                                            "nombre": "Últimas Noticias"
+                                            "nombre": "Últimas Noticias",
+                                            "categoria": "Novedades"
                                         },
                                         {
                                             "id": 63,
                                             "parentId": 61,
-                                            "nombre": "Tendencias"
+                                            "nombre": "Tendencias",
+                                            "categoria": "Innovación"
                                         },
                                         {
                                             "id": 64,
                                             "parentId": 61,
-                                            "nombre": "Eventos"
+                                            "nombre": "Eventos",
+                                            "categoria": "Reuniones"
                                         }
                                     ]
                                 },
                                 {
                                     "id": 65,
                                     "parentId": 60,
-                                    "nombre": "Tendencias"
+                                    "nombre": "Tendencias",
+                                    "categoria": "Estadísticas"
                                 },
                                 {
                                     "id": 66,
                                     "parentId": 60,
-                                    "nombre": "Eventos"
+                                    "nombre": "Eventos",
+                                    "categoria": "Planificación"
                                 }
                             ]
                         }
@@ -438,40 +493,47 @@
             "id": 67,
             "parentId": null,
             "nombre": "Compras",
+            "categoria": "Gestión de Adquisiciones",
             "items": [
                 {
                     "id": 68,
                     "parentId": 67,
                     "nombre": "Consultoría",
+                    "categoria": "Servicios",
                     "isExpanded": true,
                     "items": [
                         {
                             "id": 69,
                             "parentId": 68,
-                            "nombre": "Estrategia"
+                            "nombre": "Estrategia",
+                            "categoria": "Planificación"
                         },
                         {
                             "id": 70,
                             "parentId": 68,
-                            "nombre": "Optimización"
+                            "nombre": "Optimización",
+                            "categoria": "Mejora de Procesos"
                         }
                     ]
                 },
                 {
                     "id": 71,
-                    "parentId": 7,
+                    "parentId": 67,
                     "nombre": "Desarrollo",
+                    "categoria": "Tecnología",
                     "isExpanded": true,
                     "items": [
                         {
                             "id": 72,
-                            "parentId": 11,
-                            "nombre": "Aplicaciones Web"
+                            "parentId": 71,
+                            "nombre": "Aplicaciones Web",
+                            "categoria": "Desarrollo Web"
                         },
                         {
                             "id": 73,
-                            "parentId": 11,
-                            "nombre": "Aplicaciones Móviles"
+                            "parentId": 71,
+                            "nombre": "Aplicaciones Móviles",
+                            "categoria": "Desarrollo Móvil"
                         }
                     ]
                 }
@@ -481,22 +543,26 @@
             "id": 74,
             "parentId": null,
             "nombre": "Articulos",
+            "categoria": "Catálogo de Productos",
             "items": [
                 {
                     "id": 75,
                     "parentId": 74,
                     "nombre": "Electrónica",
+                    "categoria": "Tecnología",
                     "isExpanded": true,
                     "items": [
                         {
                             "id": 76,
                             "parentId": 75,
-                            "nombre": "Teléfonos"
+                            "nombre": "Teléfonos",
+                            "categoria": "Dispositivos"
                         },
                         {
                             "id": 77,
                             "parentId": 75,
-                            "nombre": "Computadoras"
+                            "nombre": "Computadoras",
+                            "categoria": "Equipos"
                         }
                     ]
                 },
@@ -504,17 +570,20 @@
                     "id": 78,
                     "parentId": 74,
                     "nombre": "Ropa",
+                    "categoria": "Moda",
                     "isExpanded": true,
                     "items": [
                         {
                             "id": 79,
                             "parentId": 78,
-                            "nombre": "Hombres"
+                            "nombre": "Hombres",
+                            "categoria": "Moda Masculina"
                         },
                         {
                             "id": 80,
                             "parentId": 78,
-                            "nombre": "Mujeres"
+                            "nombre": "Mujeres",
+                            "categoria": "Moda Femenina"
                         }
                     ]
                 }
@@ -524,18 +593,21 @@
             "id": 81,
             "parentId": null,
             "nombre": "TPV",
+            "categoria": "Tecnología de Pagos",
             "items": [
                 {
                     "id": 82,
                     "parentId": 81,
-                    "isExpanded": true,
-                    "nombre": "Preguntas Frecuentes"
+                    "nombre": "Preguntas Frecuentes",
+                    "categoria": "Soporte",
+                    "isExpanded": true
                 },
                 {
                     "id": 83,
                     "parentId": 81,
-                    "isExpanded": true,
-                    "nombre": "Centro de Ayuda"
+                    "nombre": "Centro de Ayuda",
+                    "categoria": "Soporte Técnico",
+                    "isExpanded": true
                 }
             ]
         },
@@ -543,54 +615,63 @@
             "id": 84,
             "parentId": null,
             "nombre": "Almacen",
+            "categoria": "Gestión de Inventarios",
             "items": [
                 {
                     "id": 85,
                     "parentId": 84,
-                    "isExpanded": true,
-                    "nombre": "Formulario de Contacto"
+                    "nombre": "Formulario de Contacto",
+                    "categoria": "Comunicación",
+                    "isExpanded": true
                 },
                 {
                     "id": 86,
                     "parentId": 84,
-                    "isExpanded": true,
-                    "nombre": "Ubicación"
+                    "nombre": "Ubicación",
+                    "categoria": "Localización",
+                    "isExpanded": true
                 }
             ]
         },
         {
             "id": 87,
             "parentId": null,
-            "isExpanded": true,
             "nombre": "Inventario",
+            "categoria": "Almacén",
+            "isExpanded": true,
             "items": [
                 {
                     "id": 88,
                     "parentId": 87,
-                    "nombre": "Formulario de Contacto"
+                    "nombre": "Formulario de Contacto",
+                    "categoria": "Comunicación"
                 },
                 {
                     "id": 89,
                     "parentId": 87,
-                    "nombre": "Ubicación"
+                    "nombre": "Ubicación",
+                    "categoria": "Localización"
                 }
             ]
         },
         {
             "id": 90,
             "parentId": null,
-            "isExpanded": true,
             "nombre": "Contabilidad",
+            "categoria": "Finanzas",
+            "isExpanded": true,
             "items": [
                 {
                     "id": 91,
                     "parentId": 90,
-                    "nombre": "Formulario de Contacto"
+                    "nombre": "Formulario de Contacto",
+                    "categoria": "Comunicación"
                 },
                 {
                     "id": 92,
                     "parentId": 90,
-                    "nombre": "Ubicación"
+                    "nombre": "Ubicación",
+                    "categoria": "Localización"
                 }
             ]
         }

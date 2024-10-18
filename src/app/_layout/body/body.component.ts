@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CheckboxComponent } from '../_secs/checkbox/checkbox.component';
 import { FormsComponentsComponent } from '../forms-components/forms-components.component';
 import { DatagridComponentComponent } from '../datagrid-component/datagrid-component.component';
+import { TreeListComponent } from '../_secs/tree-list/tree-list.component';
+import { DropdownSearchComponent } from '../_secs/dropdown-search/dropdown-search.component';
 interface TabComponents {
   title: string;
   component?: any; // Puede ser refinado a Type<any> si es necesario
@@ -23,8 +25,12 @@ export class BodyComponent {
       component: FormsComponentsComponent, // Aquí especificamos el componente a renderizar
     },
     {
-      title: 'Pestaña 3',
-      content: '<p>Más contenido dinámico aquí.</p>',
+      title: 'Tree List',
+      component: TreeListComponent, // Aquí especificamos el componente a renderizar
+    },
+    {
+      title: 'Dropdown Search',
+      component: DropdownSearchComponent, // Aquí especificamos el componente a renderizar
     },
   ];
 }

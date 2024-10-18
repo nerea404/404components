@@ -1,0 +1,6 @@
+@import "../../../styles/helpers/helpers-dir";
+@import "../../../styles/variables";
+::ng-deep {
+  @include ccc-dropdown-search;
+ 
+}

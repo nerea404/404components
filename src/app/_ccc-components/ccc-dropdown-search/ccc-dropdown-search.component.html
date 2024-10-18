@@ -1,0 +1,34 @@
+<div class="ccc-dropdown-search">
+  <dx-drop-down-box
+    id="dropdown"
+    [(value)]="gridBoxValue"
+    [inputAttr]="{ 'aria-label': 'Owner' }"
+    valueExpr="ID"
+    displayExpr="nombreFiscal"
+    placeholder="Selecciona cliente..."
+    [showClearButton]="true"
+    [dataSource]="filteredDataSource"
+    [(opened)]="isDropDownOpened"
+    [dropDownOptions]="{
+      wrapperAttr: { class: 'desplegable-dropdown-search' }
+    }"
+  >
+    <div *dxTemplate="let data of 'content'">
+      <div class="div-btn-filtros">
+        <button (click)="goToX()" class="btn-otros-filtros"></button>
+      </div>
+      <dx-data-grid
+        [dataSource]="filteredDataSource"
+        [columns]="['nombreFiscal']"
+        [selection]="{ mode: 'single' }"
+        [hoverStateEnabled]="true"
+        [paging]="{ enabled: false }"
+        [filterRow]="{ visible: true, applyFilterText: 'Buscar...' }"
+        [scrolling]="{ mode: 'virtual' }"
+        [height]="300"
+        (onRowClick)="onRowClick($event)"
+      >
+      </dx-data-grid>
+    </div>
+  </dx-drop-down-box>
+</div>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,10 +10,15 @@ import { FormsComponentsModule } from './_layout/forms-components/forms-componen
 import { DatagridComponentModule } from './_layout/datagrid-component/datagrid-component.module';
 import { DxDropDownButtonModule } from 'devextreme-angular';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { CccTreelistComponent } from './_ccc-components/ccc-treelist/ccc-treelist.component';
+import { TreeListComponent } from './_layout/_secs/tree-list/tree-list.component';
+import { DropdownSearchComponent } from './_layout/_secs/dropdown-search/dropdown-search.component';
+import { CccDropdownSearchModule } from "./_ccc-components/ccc-dropdown-search/ccc-dropdown-search.module";
 
 @NgModule({
   declarations: [
     AppComponent,
+    
   
   ],
   imports: [
@@ -23,11 +28,13 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     BodyModule,
     FormsComponentsModule,
     DatagridComponentModule,
-    DxDropDownButtonModule
-  ],
+    DxDropDownButtonModule,
+    CccDropdownSearchModule
+],
   providers: [
     provideAnimationsAsync('noop')
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
