@@ -1,7 +1,6 @@
 <div class="treelist-container">
   <div class="botones-filtros">
     <button mat-button [matMenuTriggerFor]="popup"></button>
-
     <mat-menu #popup="matMenu" class="menu-desplegable">
       <button mat-menu-item [matMenuTriggerFor]="filtros" class="desp-filtros">
         Activar filtros
@@ -27,16 +26,16 @@
       >
         Filtros personalizados
       </button>
+      <button
+        mat-menu-item
+        (click)="toggleDragAndDrop()"
+        class="toggle-drag-drop"
+      >
+        {{ options.dragAndDropEnabled ? 'Desactivar' : 'Activar' }} Drag & Drop
+      </button>
     </mat-menu>
-
     <!-- Submenú para los filtros -->
     <mat-menu #filtros="matMenu" class="submenu-desplegable">
-      <mat-checkbox
-        [(ngModel)]="options.selection"
-        (change)="applyTreeListOptions()"
-      >
-        Selector fila
-      </mat-checkbox>
       <mat-checkbox
         [(ngModel)]="options.filterRow"
         (change)="applyTreeListOptions()"
@@ -57,8 +56,7 @@
       </mat-checkbox>
     </mat-menu>
   </div>
-
-  <div class="ccc-treelist-container">
+  <div class="ccc-treelist-container" [ngClass]="{'checkbox-active': options.filterRow, 'checkbox-inactive': !options.filterRow}">
     <dx-tree-list
       #treeList
       [dataSource]="menu"
@@ -69,19 +67,36 @@
       [showBorders]="true"
       [rowAlternationEnabled]="true"
       (onRowClick)="onRowClick($event)"
+      
     >
+
+    <dxo-editing
+    mode="cell"
+    [allowAdding]="false"
+    [allowUpdating]="false"
+    [allowDeleting]="false"
+  ></dxo-editing>
       <dxo-search-panel [visible]="true" width="250"></dxo-search-panel>
-      <dxo-selection mode="multiple"></dxo-selection>
-      <dxi-column
-        dataField="nombre"
-        caption="Nombre"
-        [width]="300"
-      ></dxi-column>
-      <dxi-column
-        dataField="categoria"
-        caption="Categoría"
-        [minWidth]="200"
-      ></dxi-column>
+      <dxo-selection
+        [mode]="options.selection ? 'multiple' : 'none'"
+      ></dxo-selection>
+      <dxo-row-dragging
+        *ngIf="options.dragAndDropEnabled"
+        [onDragChange]="onDragChange"
+        [onReorder]="onReorder"
+        [allowDropInsideItem]="true"
+        [allowReordering]="true"
+        [showDragIcons]="true"
+      ></dxo-row-dragging>
+      <ng-container *ngFor="let column of columns">
+        <dxi-column
+          [dataField]="column.dataField"
+          [caption]="column.caption"
+          [width]="column.width"
+          [allowSorting]="column.allowSorting"
+          cssClass="no-sorting"
+        ></dxi-column>
+      </ng-container>
     </dx-tree-list>
   </div>
 </div>

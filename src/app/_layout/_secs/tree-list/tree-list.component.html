@@ -1,3 +1,8 @@
 <app-ccc-treelist
-  [menu]="menu" 
+  [menu]="menu"
+  [columns]="[
+    { dataField: 'nombre', caption: 'Nombre'},
+    { dataField: 'categoria', caption: 'Categoría'}
+  ]"
+  [showCheckboxes]="false"
 ></app-ccc-treelist>

@@ -1,7 +1,7 @@
 @import "../../../styles/helpers/helpers-dir";
 @import '../../../styles/variables';
 ::ng-deep {
-    .treelist-container {
+  app-ccc-treelist {
       @include ccc-treelist;
     }
   }

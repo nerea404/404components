@@ -280,15 +280,15 @@
                                 },
                                 {
                                     "id": 36,
-                                            "parentId": 31,
-                                            "nombre": "Tendencias",
-                                            "categoria": "Estadísticas"
+                                    "parentId": 31,
+                                    "nombre": "Tendencias",
+                                    "categoria": "Estadísticas"
                                 },
                                 {
                                     "id": 37,
-                                            "parentId": 31,
-                                            "nombre": "Eventos",
-                                            "categoria": "Planificación"
+                                    "parentId": 31,
+                                    "nombre": "Eventos",
+                                    "categoria": "Planificación"
                                 }
                             ]
                         }
@@ -556,7 +556,49 @@
                             "id": 76,
                             "parentId": 75,
                             "nombre": "Teléfonos",
-                            "categoria": "Dispositivos"
+                            "categoria": "Dispositivos",
+                            "items": [
+                                {
+                                    "id": 765,
+                                    "parentId": 76,
+                                    "nombre": "Teléfonos",
+                                    "categoria": "Dispositivos",
+                                    "items": [
+                                        {
+                                            "id": 7643,
+                                            "parentId": 765,
+                                            "nombre": "Teléfonos",
+                                            "categoria": "Dispositivos",
+                                            "items": [
+                                                {
+                                                    "id": 7654,
+                                                    "parentId": 7646,
+                                                    "nombre": "Teléfonos",
+                                                    "categoria": "Dispositivos"
+                                                },
+                                                {
+                                                    "id": 7747,
+                                                    "parentId": 7646,
+                                                    "nombre": "Computadoras",
+                                                    "categoria": "Equipos"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 77,
+                                            "parentId": 75,
+                                            "nombre": "Computadoras",
+                                            "categoria": "Equipos"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 774,
+                                    "parentId": 76,
+                                    "nombre": "Computadoras",
+                                    "categoria": "Equipos"
+                                }
+                            ]
                         },
                         {
                             "id": 77,
@@ -622,7 +664,23 @@
                     "parentId": 84,
                     "nombre": "Formulario de Contacto",
                     "categoria": "Comunicación",
-                    "isExpanded": true
+                    "isExpanded": true,
+                    "items": [
+                        {
+                            "id": 1022,
+                            "parentId": 85,
+                            "nombre": "Formulario de Contacto",
+                            "categoria": "Comunicación",
+                            "isExpanded": true
+                        },
+                        {
+                            "id": 1023,
+                            "parentId": 85,
+                            "nombre": "Ubicación",
+                            "categoria": "Localización",
+                            "isExpanded": true
+                        }
+                    ]
                 },
                 {
                     "id": 86,

@@ -66,6 +66,7 @@
 
   dx-tree-list {
     border: 1px solid #dedede;
+    border-bottom: none;
     .dx-treelist-container {
       .dx-treelist-header-panel {
         padding: 7px 12px;
@@ -168,22 +169,24 @@
         table {
           tbody {
             tr {
+              border-bottom: 1px solid #dedede;
               td {
                 background-color: #f9f9f9;
-
-                padding: 12px 0px 12px 16px;
+                padding: 12px 0px 12px 0px;
                 border: none;
+
                 &:first-child {
-                  padding: 12px 0px 12px 56px;
+                  padding: 12px 0px 12px 59px;
                   .dx-treelist-text-content {
                     border-left: 1px solid #cfcfcf;
                     padding-left: 6px;
+                    border-right: none;
                   }
                 }
 
                 &:last-child {
                   .dx-treelist-text-content {
-                    border: none;
+                    border-right: none;
                   }
                 }
 
@@ -201,6 +204,8 @@
                   letter-spacing: 0.1px;
                   width: 100%;
                   border-right: 1px solid #cfcfcf;
+                  border-left: 1px solid #cfcfcf;
+                  padding-left: 16px;
                 }
               }
             }
@@ -214,67 +219,141 @@
         table {
           tbody {
             tr {
-              border-top: 1px solid #eceaea;
+              border-bottom: 1px solid #dedede !important;
+              border-top: none;
+              &:last-child {
+                border-bottom: none !important;
+              }
 
               &:hover {
                 td {
-                  background-color: #dedede;
-                }
-              }
-              td {
-                border-top: 1px solid #eceaea;
-
-                padding: 4.5px;
-                .dx-treelist-icon-container {
-                  line-height: 0;
-                  padding-right: 40px;
-
-                  .dx-treelist-empty-space {
-                    margin-right: 0px;
-                    span {
-                      &:before {
-                        margin-top: -9px;
-                        margin-left: -6px;
+                  .dx-treelist-icon-container {
+                    .dx-checkbox {
+                      .dx-checkbox-container {
+                        &::after,
+                        &::before {
+                          background-color: #e7e7e7;
+                        }
                       }
                     }
                   }
+                }
+              }
+              td {
+                padding: 0px;
+                padding-left: 6px;
+                height: 27px;
+                color: var(--color-texto);
+                font-family: var(--tipografia);
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: 0.1px;
+                text-transform: uppercase;
+                vertical-align: middle !important;
+                .dx-treelist-text-content {
+                  color: var(--color-texto);
+                  font-family: var(--tipografia);
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                  letter-spacing: 0.1px;
+                  text-transform: uppercase;
+                  padding-left: 6px;
+                }
+
+                .dx-texteditor-input {
+                  min-height: auto;
+                  padding: 0px;
+
+                  color: #1a1a1a;
+                  font-family: var(--tipografia);
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                  letter-spacing: 0.1px;
+                  text-transform: uppercase;
+                }
+
+                &:first-child {
+                  padding-left: 0px;
+                  height: 29px;
+                }
+              }
+
+              .dx-treelist-cell-expandable {
+                display: flex;
+                align-items: center;
+                border-right: none;
+
+                width: 100% !important;
+                max-width: 100% !important;
+
+                .dx-treelist-icon-container {
+                  line-height: 0;
+                  padding-right: 0px;
+                  display: flex;
+                  align-items: center;
+
+                  .dx-treelist-collapsed span::before {
+                    content: "\e90a";
+                    font-family: "icomoon";
+                  }
+
+                  .dx-treelist-expanded span::before {
+                    content: "\e90b";
+                    font-family: "icomoon";
+                  }
+
+                  .dx-treelist-empty-space {
+                    width: 30px;
+                    &:before {
+                      display: none;
+                    }
+                    span {
+                      &:before {
+                        margin-top: 0px;
+                        margin-left: 0px;
+                        position: relative;
+                      }
+                    }
+                  }
+
+                  .dx-treelist-expanded,
+                  .dx-treelist-collapsed {
+                    width: 26px;
+                  }
+
                   .dx-checkbox {
-                    margin-top: -10px;
+                    margin-top: 0px;
+                    position: relative;
+                    padding-bottom: 0px;
                     .dx-checkbox-container {
-                      // &:before {
-                      //   width: 1px;
-                      //   height: 28px;
-                      //   background-color: #dedede;
-                      //   content: "";
-                      //   display: flex;
-                      // }
-                      // &::after {
-                      //   width: 1px;
-                      //   height: 28px;
-                      //   background-color: #dedede;
-                      //   content: "";
-                      //   display: flex;
-                      // }
+                      &::after {
+                        content: "";
+                        width: 1px;
+                        height: 28px;
+                        background-color: #dedede;
+                        display: block;
+                      }
+                      &::before {
+                        content: "";
+                        width: 1px;
+                        height: 28px;
+                        background-color: #dedede;
+                        display: block;
+                      }
                       .dx-checkbox-icon {
-                        // margin: 0px 6px;
                         width: 18px;
                         height: 18px;
                         border-radius: 3px;
                         border: 1.432px solid var(--color-principal);
                         background: #ecedef;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        //   &::before {
-                        //     background: var(--color-principal);
-                        //     content: '';
-                        //     width: 8px;
-                        //     height: 8px;
-                        //     border-radius: 3px;
-
-                        //   }
+                        margin: 0px 6px;
                       }
-
                       .dx-checkbox-text {
                         color: var(--color-texto);
                         font-family: var(--tipografia);
@@ -286,50 +365,6 @@
                       }
                     }
                   }
-
-                  .dx-checkbox-checked {
-                    .dx-checkbox-container {
-                      .dx-checkbox-icon {
-                        width: 18px;
-                        height: 18px;
-                        border-radius: 4.582px;
-                        border: 1.432px solid var(--color-principal);
-                        background: #ecedef;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        &::before {
-                          background: var(--color-principal);
-                          content: "";
-                          width: 8px;
-                          height: 8px;
-                          border-radius: 3px;
-                          position: static;
-                          margin-top: 0;
-                          margin-inline-start: 0;
-                        }
-                      }
-                    }
-                  }
-                }
-
-                color: var(--color-texto);
-                font-family: var(--tipografia);
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                letter-spacing: 0.1px;
-                text-transform: uppercase;
-                .dx-treelist-text-content {
-                  color: var(--color-texto);
-                  font-family: var(--tipografia);
-                  font-size: 12px;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: normal;
-                  letter-spacing: 0.1px;
-                  text-transform: uppercase;
                 }
               }
             }
@@ -337,44 +372,101 @@
             tr[aria-expanded="true"][aria-level="1"] {
               td {
                 background: #d0dbe1;
-              }
-            }
-            tr[aria-expanded="true"][aria-level="2"] {
-              td {
-                background: #2c6a8f;
-                color: #fff;
-                .dx-treelist-text-content {
-                  color: #fff;
+
+                .dx-checkbox {
+                  .dx-checkbox-container {
+                    &::after,
+                    &::before {
+                      background-color: #fff;
+                    }
+                  }
                 }
               }
             }
 
-            tr[aria-expanded="true"][aria-level="3"] {
+            tr[aria-expanded="true"][aria-level="2"] {
               td {
-                background: #dedede;
+                background-color: #e7e7e7;
+                color: #408cbe;
+
+                .dx-treelist-text-content {
+                  color: #408cbe;
+                }
+
+                .dx-checkbox {
+                  .dx-checkbox-container {
+                    &::after,
+                    &::before {
+                      background-color: #fff;
+                    }
+                  }
+                }
               }
             }
 
-            // tr[aria-expanded="true"][aria-level]:nth-of-type(odd) {
-            //   td {
-            //     background-color: #d0dbe1;
-            //   }
-            // }
+            tr[aria-expanded="true"] {
+              td {
+                background: #dedede;
+                .dx-checkbox {
+                  .dx-checkbox-container {
+                    &::after,
+                    &::before {
+                      background-color: #e7e7e7 !important;
+                    }
+                  }
+                }
+              }
+            }
 
-            // tr[aria-expanded="true"][aria-level]:nth-of-type(even) {
-            //   td {
-            //     background-color: #2c6a8f;
-            //     color: #fff;
+            tr[aria-level="2"] {
+              td {
+                color: #408cbe;
+                .dx-treelist-text-content {
+                  color: #408cbe;
+                }
+              }
+            }
 
-            //     .dx-treelist-text-content {
-            //       color: #fff;
-            //     }
-            //   }
-            // }
+            tr[aria-level="1"] {
+              td {
+                .dx-treelist-collapsed,
+                .dx-treelist-expanded {
+                  margin-right: 0px;
+                  padding: 4px;
+                  width: 28px !important;
+                }
+              }
+            }
+
+            tr[aria-rowindex="1"] {
+              td {
+                border-top: none;
+              }
+            }
 
             .dx-row-alt {
               td {
                 background-color: #f9f9f9;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .checkbox-inactive {
+    dx-tree-list {
+      .dx-treelist-container {
+        .dx-treelist-headers {
+          table {
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: 12px 0px 12px 26px;
+                  }
+                }
               }
             }
           }

@@ -353,6 +353,11 @@
         border: 1px solid var(--color-bordes);
 
         min-height: 33px;
+
+        &:last-child{
+          border-radius: 0px 0px 8px 8px;
+
+        }
         .mat-mdc-menu-item-text {
           color: var(--color-texto);
           text-overflow: ellipsis;
@@ -428,7 +433,6 @@
       }
 
       .filtro-personalizado {
-        border-radius: 0px 0px 8px 8px;
         .mat-mdc-menu-item-text {
           // &::before {
           //   content: url(/assets/img/personalizados.svg);
