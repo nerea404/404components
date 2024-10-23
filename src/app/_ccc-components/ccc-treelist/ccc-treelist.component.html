@@ -1,6 +1,6 @@
 <div class="treelist-container">
   <div class="botones-filtros">
-    <button mat-button [matMenuTriggerFor]="popup"></button>
+    <button mat-button [matMenuTriggerFor]="popup">Menu</button>
     <mat-menu #popup="matMenu" class="menu-desplegable">
       <button mat-menu-item [matMenuTriggerFor]="filtros" class="desp-filtros">
         Activar filtros
@@ -33,8 +33,14 @@
       >
         {{ options.dragAndDropEnabled ? 'Desactivar' : 'Activar' }} Drag & Drop
       </button>
+      <button
+        mat-menu-item
+        (click)="toggleCheckboxes()"
+        class="toggle-checkboxes"
+      >
+        {{ options.selection ? 'Desactivar' : 'Activar' }} Selección
+      </button>
     </mat-menu>
-    <!-- Submenú para los filtros -->
     <mat-menu #filtros="matMenu" class="submenu-desplegable">
       <mat-checkbox
         [(ngModel)]="options.filterRow"
@@ -67,19 +73,21 @@
       [showBorders]="true"
       [rowAlternationEnabled]="true"
       (onRowClick)="onRowClick($event)"
-      
     >
-
-    <dxo-editing
-    mode="cell"
-    [allowAdding]="false"
-    [allowUpdating]="false"
-    [allowDeleting]="false"
-  ></dxo-editing>
+      <dxo-editing
+        mode="cell"
+        [allowAdding]="false"
+        [allowUpdating]="false"
+        [allowDeleting]="false"
+      ></dxo-editing>
       <dxo-search-panel [visible]="true" width="250"></dxo-search-panel>
+      
+      <!-- Aquí se usa *ngIf para mostrar o ocultar dxo-selection según showCheckboxes -->
       <dxo-selection
+        *ngIf="showCheckboxes"
         [mode]="options.selection ? 'multiple' : 'none'"
       ></dxo-selection>
+      
       <dxo-row-dragging
         *ngIf="options.dragAndDropEnabled"
         [onDragChange]="onDragChange"

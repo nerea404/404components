@@ -177,4 +177,9 @@ export class CccTreelistComponent implements OnChanges {
     this.options.dragAndDropEnabled = !this.options.dragAndDropEnabled;
     this.treeList.instance.option('rowDragging.enabled', this.options.dragAndDropEnabled);
   }
+
+  toggleCheckboxes() {
+    this.options.selection = !this.options.selection; // Alternar la selección
+  }
+
 }
