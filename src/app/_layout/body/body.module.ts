@@ -19,7 +19,6 @@ import { TreeListModule } from '../_secs/tree-list/tree-list.module';
 import { DropdownSearchModule } from '../_secs/dropdown-search/dropdown-search.module';
 
 
-
 @NgModule({
   declarations: [BodyComponent],
   exports: [BodyComponent],

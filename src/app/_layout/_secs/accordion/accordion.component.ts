@@ -11,6 +11,6 @@ export class AccordionComponent {
     {
       title: 'Sección 1',
       component: CheckboxComponent // Aquí especificamos el componente a renderizar
-    }
+    },
   ];
 }

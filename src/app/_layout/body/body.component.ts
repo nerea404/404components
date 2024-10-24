@@ -32,5 +32,9 @@ export class BodyComponent {
       title: 'Dropdown Search',
       component: DropdownSearchComponent, // Aquí especificamos el componente a renderizar
     },
+    // {
+    //   title: 'FileManager',
+    //   component: FilemanagerComponent, // Aquí especificamos el componente a renderizar
+    // },
   ];
 }
